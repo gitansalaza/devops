@@ -1,0 +1,14 @@
+---
+- name: Deploy Sample WAR Application onto Apache Tomcat
+  hosts: webserver
+  remote_user: devops
+  become: yes
+  tasks:
+    - name: Copy sample.war
+      copy:
+        src: /home/devops/scripts/ansible/tomcat/sample.war
+        dest: /opt/tomcat/webapps/sample.war
+        remote_src: yes
+        mode: 0755
+        force: yes
+

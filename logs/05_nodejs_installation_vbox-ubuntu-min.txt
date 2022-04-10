@@ -1,0 +1,59 @@
+ansalaza@vbox-ubuntu20-min:~$ node -v
+
+Command 'node' not found, but can be installed with:
+
+sudo apt install nodejs
+
+ansalaza@vbox-ubuntu20-min:~$ sudo apt update
+[sudo] password for ansalaza:
+Hit:2 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Hit:3 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease
+Ign:1 https://pkg.jenkins.io/debian-stable binary/ InRelease
+Hit:4 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:6 http://us.archive.ubuntu.com/ubuntu focal-security InRelease
+Hit:5 https://pkg.jenkins.io/debian-stable binary/ Release
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+49 packages can be upgraded. Run 'apt list --upgradable' to see them.
+ansalaza@vbox-ubuntu20-min:~$ sudo apt-get install -y nodejs
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libc-ares2 libnode64 nodejs-doc
+Suggested packages:
+  npm
+The following NEW packages will be installed:
+  libc-ares2 libnode64 nodejs nodejs-doc
+0 upgraded, 4 newly installed, 0 to remove and 49 not upgraded.
+Need to get 6,807 kB of archives.
+After this operation, 30.7 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 libc-ares2 amd64 1.15.0-1ubuntu0.1 [38.2 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libnode64 amd64 10.19.0~dfsg-3ubuntu1 [5,765 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 nodejs-doc all 10.19.0~dfsg-3ubuntu1 [942 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 nodejs amd64 10.19.0~dfsg-3ubuntu1 [61.1 kB]
+Fetched 6,807 kB in 9s (775 kB/s)
+Selecting previously unselected package libc-ares2:amd64.
+(Reading database ... 88365 files and directories currently installed.)
+Preparing to unpack .../libc-ares2_1.15.0-1ubuntu0.1_amd64.deb ...
+Unpacking libc-ares2:amd64 (1.15.0-1ubuntu0.1) ...
+Selecting previously unselected package libnode64:amd64.
+Preparing to unpack .../libnode64_10.19.0~dfsg-3ubuntu1_amd64.deb ...
+Unpacking libnode64:amd64 (10.19.0~dfsg-3ubuntu1) ...
+Selecting previously unselected package nodejs-doc.
+Preparing to unpack .../nodejs-doc_10.19.0~dfsg-3ubuntu1_all.deb ...
+Unpacking nodejs-doc (10.19.0~dfsg-3ubuntu1) ...
+Selecting previously unselected package nodejs.
+Preparing to unpack .../nodejs_10.19.0~dfsg-3ubuntu1_amd64.deb ...
+Unpacking nodejs (10.19.0~dfsg-3ubuntu1) ...
+Setting up libc-ares2:amd64 (1.15.0-1ubuntu0.1) ...
+Setting up libnode64:amd64 (10.19.0~dfsg-3ubuntu1) ...
+Setting up nodejs-doc (10.19.0~dfsg-3ubuntu1) ...
+Setting up nodejs (10.19.0~dfsg-3ubuntu1) ...
+update-alternatives: using /usr/bin/nodejs to provide /usr/bin/js (js) in auto mode
+Processing triggers for libc-bin (2.31-0ubuntu9.7) ...
+Processing triggers for man-db (2.9.1-1) ...
+ansalaza@vbox-ubuntu20-min:~$ node -v
+v10.19.0
+ansalaza@vbox-ubuntu20-min:~$

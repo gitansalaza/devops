@@ -1,0 +1,23 @@
+ansalaza@vbox-ubuntu20-min:~$ git --version
+-bash: /usr/bin/git: No such file or directory
+ansalaza@vbox-ubuntu20-min:~$ sudo apt-get install -y git
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git
+0 upgraded, 1 newly installed, 0 to remove and 49 not upgraded.
+Need to get 4,554 kB of archives.
+After this operation, 36.5 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 git amd64 1:2.25.1-1ubuntu3.2 [4,554 kB]
+Fetched 4,554 kB in 8s (577 kB/s)
+Selecting previously unselected package git.
+(Reading database ... 86619 files and directories currently installed.)
+Preparing to unpack .../git_1%3a2.25.1-1ubuntu3.2_amd64.deb ...
+Unpacking git (1:2.25.1-1ubuntu3.2) ...
+Setting up git (1:2.25.1-1ubuntu3.2) ...
+ansalaza@vbox-ubuntu20-min:~$ git --version
+git version 2.25.1
+ansalaza@vbox-ubuntu20-min:~$

@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+        stage("execute Deploy") {
+           steps {
+                ansiblePlaybook credentialsId: 'devops', disableHostKeyChecking: true, installation: 'Ansible', inventory: '/etc/ansible/hosts', playbook: '/home/devops/scripts/ansible/deploy_sample_war.yaml'
+            }    
+        }
+
+        stage ("Stop Tomcat Service") {
+           steps {
+                build job: 'Service', parameters:[[$class: 'StringParameterValue', name: 'action', value: 'stop']]
+           }
+        }
+
+        stage ("Sart Tomcat Service") {
+           steps {
+                build job: 'Service', parameters:[[$class: 'StringParameterValue', name: 'action', value: 'start']]
+           }
+        }
+        
+    }
+}

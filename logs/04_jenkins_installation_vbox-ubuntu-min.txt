@@ -1,0 +1,90 @@
+ansalaza@vbox-ubuntu20-min:~$ ls -l /usr/share/jenkins
+ls: cannot access '/usr/share/jenkins': No such file or directory
+ansalaza@vbox-ubuntu20-min:~$ jenkins --version
+jenkins: command not found
+ansalaza@vbox-ubuntu20-min:~$  wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+OK
+ansalaza@vbox-ubuntu20-min:~$ sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+ansalaza@vbox-ubuntu20-min:~$ sudo apt update
+Hit:2 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Hit:3 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:4 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:5 http://us.archive.ubuntu.com/ubuntu focal-security InRelease
+Ign:1 https://pkg.jenkins.io/debian-stable binary/ InRelease
+Get:6 https://pkg.jenkins.io/debian-stable binary/ Release [2,044 B]
+Get:7 https://pkg.jenkins.io/debian-stable binary/ Release.gpg [833 B]
+Get:8 https://pkg.jenkins.io/debian-stable binary/ Packages [21.8 kB]
+Fetched 24.6 kB in 2s (14.7 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+49 packages can be upgraded. Run 'apt list --upgradable' to see them.
+ansalaza@vbox-ubuntu20-min:~$ sudo apt install -y jenkins
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  net-tools
+The following NEW packages will be installed:
+  jenkins net-tools
+0 upgraded, 2 newly installed, 0 to remove and 49 not upgraded.
+Need to get 91.5 MB of archives.
+After this operation, 95.9 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 net-tools amd64 1.60+git20180626.aebd88e-1ubuntu1 [196 kB]
+Get:2 https://pkg.jenkins.io/debian-stable binary/ jenkins 2.332.2 [91.4 MB]
+Fetched 91.5 MB in 51s (1,808 kB/s)
+Selecting previously unselected package net-tools.
+(Reading database ... 88302 files and directories currently installed.)
+Preparing to unpack .../net-tools_1.60+git20180626.aebd88e-1ubuntu1_amd64.deb ...
+Unpacking net-tools (1.60+git20180626.aebd88e-1ubuntu1) ...
+Selecting previously unselected package jenkins.
+Preparing to unpack .../jenkins_2.332.2_all.deb ...
+Unpacking jenkins (2.332.2) ...
+Setting up net-tools (1.60+git20180626.aebd88e-1ubuntu1) ...
+Setting up jenkins (2.332.2) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/jenkins.service ? /lib/systemd/system/jenkins.service.
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for systemd (245.4-4ubuntu3.15) ...
+ansalaza@vbox-ubuntu20-min:~$ ls -l /usr/share/jenkins
+total 20
+-rwxr-xr-x 1 root root 18845 Apr  6 11:25 migrate
+ansalaza@vbox-ubuntu20-min:~$ jenkins --version
+2.332.2
+ansalaza@vbox-ubuntu20-min:~$ sudo systemctl status jenkins
+? jenkins.service - Jenkins Continuous Integration Server
+     Loaded: loaded (/lib/systemd/system/jenkins.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2022-04-08 12:58:09 UTC; 50s ago
+   Main PID: 9786 (java)
+      Tasks: 42 (limit: 9443)
+     Memory: 978.4M
+     CGroup: /system.slice/jenkins.service
+             +-9786 /usr/bin/java -Djava.awt.headless=true -jar /usr/share/java/jenkins.war --webroot=/var/cache/jenkins/war --httpPort=8080
+
+Apr 08 12:57:45 vbox-ubuntu20-min jenkins[9786]: This may also be found at: /var/lib/jenkins/secrets/initialAdminPassword
+Apr 08 12:57:45 vbox-ubuntu20-min jenkins[9786]: *************************************************************
+Apr 08 12:57:45 vbox-ubuntu20-min jenkins[9786]: *************************************************************
+Apr 08 12:57:45 vbox-ubuntu20-min jenkins[9786]: *************************************************************
+Apr 08 12:58:08 vbox-ubuntu20-min jenkins[9786]: 2022-04-08 12:58:08.763+0000 [id=28]        INFO        jenkins.InitReactorRunner$1#onAttained: Completed initialization
+Apr 08 12:58:09 vbox-ubuntu20-min jenkins[9786]: 2022-04-08 12:58:09.034+0000 [id=20]        INFO        hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+Apr 08 12:58:09 vbox-ubuntu20-min systemd[1]: Started Jenkins Continuous Integration Server.
+Apr 08 12:58:10 vbox-ubuntu20-min jenkins[9786]: 2022-04-08 12:58:10.035+0000 [id=44]        INFO        h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenIn>
+Apr 08 12:58:10 vbox-ubuntu20-min jenkins[9786]: 2022-04-08 12:58:10.036+0000 [id=44]        INFO        hudson.util.Retrier#start: Performed the action check updates server successfully at the attempt #1
+Apr 08 12:58:10 vbox-ubuntu20-min jenkins[9786]: 2022-04-08 12:58:10.040+0000 [id=44]        INFO        hudson.model.AsyncPeriodicWork#lambda$doRun$1: Finished Download metadata. 26,389 ms
+ansalaza@vbox-ubuntu20-min:~$ sudo systemctl enable jenkins
+Synchronizing state of jenkins.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable jenkins
+ansalaza@vbox-ubuntu20-min:~$ sudo ufw allow OpenSSH
+[sudo] password for ansalaza:
+Rules updated
+Rules updated (v6)
+ansalaza@vbox-ubuntu20-min:~$ sudo ufw enable
+Command may disrupt existing ssh connections. Proceed with operation (y|n)? y
+Firewall is active and enabled on system startup
+ansalaza@vbox-ubuntu20-min:~$ sudo ufw allow 8080
+Rule added
+Rule added (v6)
+ansalaza@vbox-ubuntu20-min:~$ cat /var/lib/jenkins/secrets/initialAdminPassword
+cat: /var/lib/jenkins/secrets/initialAdminPassword: Permission denied
+ansalaza@vbox-ubuntu20-min:~$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+0b8521415a704e92ac8914fac71af901
+ansalaza@vbox-ubuntu20-min:~$

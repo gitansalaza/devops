@@ -1,0 +1,34 @@
+---
+- name: Manage Apache Tomcat Services
+  hosts: webserver
+  remote_user: devops
+  become: yes
+  tasks:
+    - name: Stop tomcat
+      systemd:
+        name: tomcat
+        state: stopped
+      tags: 
+        - stop
+
+    - name: Start tomcat
+      systemd:
+        name: tomcat
+        state: started
+      tags: 
+        - start
+
+    - name: restart tomcat
+      systemd:
+        name: tomcat
+        state: restarted
+        daemon_reload: true
+      tags: 
+        - restart
+
+    - name: restart tomcat
+      systemd:
+        name: tomcat
+        state: reloaded
+      tags: 
+        - reload

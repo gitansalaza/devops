@@ -6,9 +6,8 @@ PG DO - Configuration Management with Ansible and Terraform <br/>
 
 - Assigned to: Antonio Salazar Gomez ([antonio.salazar@ymail.com](mailto:antonio.salazar@ymail.com))
 - Updated on:  2022-04-02 
-- Github repo: gitansalaza or  asgdevops/asgdevops 
+- Github repo: [gitansalaza/devops](https://github.com/gitansalaza/devops/blob/main/project_01_ci-cd_deployment_using_ansible_cm_tool.md)
 
-<br />
 
 # DESCRIPTION
 
@@ -36,9 +35,9 @@ You are a DevOps engineer at XYZ Ltd. Your company is working on a Java applicat
     > sudo apt-get install openjdk-8-jre
     >```
 
-Log files:
-- Video about [Installing OpenJDK 8 in Ubuntu Server 20.03](https://youtu.be/C_ik63ntQ5g)
-- Terminal log [01_openjdk8_installation_vbox-ubuntu-min_20220403_225222.txt](01_openjdk8_installation_vbox-ubuntu-min_20220403_225222.txt)
+    Log files:
+   - [01 How to install OpenJDK 8 on Ubuntu Server 20.04.3](https://youtu.be/VsXFn_YTGlo)
+   - [Terminal log file](logs/01_openjdk8_installation_vbox-ubuntu-min.txt)
 
 <br/>
 
@@ -52,6 +51,11 @@ Log files:
     > sudo apt install git-all
     >```
 
+    Log files:
+    - [02 How to install Git on Ubuntu Server 20.04.3](https://youtu.be/gcKAxupni14)   
+    - [Terminal log file](logs/02_git_installation_vbox-ubuntu-min.txt)
+
+
 3. In case ***Maven*** is not installed in your system, you can install it using the commands:
     >```
     > # Verify Apache Maven is installed
@@ -61,6 +65,10 @@ Log files:
     > sudo apt-get update
     > sudo apt-get install maven
     >```
+
+    Log files:
+      - [03 How to install Maven on Ubuntu Server 20.04.3](https://youtu.be/ujtrG0llCHQ)
+      - [Maven installation log file](logs/03_maven_installation_vbox-ubuntu-min.txt)
 
 4. If ***Jenkins*** is not installed in your host, install it using the commands below:
 
@@ -112,6 +120,10 @@ Log files:
     > sudo ufw allow 8080
     >```
     
+    Log files:
+      - [04 How to install Jenkins Ubuntu Server 20.04.3](https://youtu.be/MnAa2xmHyKA)
+      - [Jenkins installation log file](logs/04_jenkins_installation_vbox-ubuntu-min.txt)
+
 5. Ensure ***Node.js*** and ***npm*** are installed on the host, you can install it by using the commands:
 
     5.1  For *Node.js* installation
@@ -123,6 +135,10 @@ Log files:
     > sudo apt-get update
     > sudo apt-get install nodejs
     >```
+
+    Log files:
+      - [05 How to install Node.js on Ubuntu Server 20.04.3](https://youtu.be/Yk6BO_oJ-5g)
+      - [Node.js installation log](logs/06_npm_installation_vbox-ubuntu-min.txt)
     
     5.2 For *npm* installation
     >```
@@ -134,6 +150,10 @@ Log files:
     > sudo apt-get install npm
     >```
 
+    Log files:
+      - [06 How to install npm on Ubuntu Server 20.04.3](https://youtu.be/UqO08tf-9ZE)
+      - [npm installation log](logs/06_npm_installation_vbox-ubuntu-min.txt)
+
 6. Install Ansible
 
     > ```
@@ -144,12 +164,35 @@ Log files:
     > sudo apt install ansible
     > ```
 
+    Log files:
+       - [07 How to install Ansible on Ubuntu Server 20.04.3](https://youtu.be/33TpTCP7ccs)
+       - [Terminal log about Ansible installation](logs/07_ansible_installation_vbox-ubuntu-min.txt)
+  
 - ## Install Ansible plugins in Jenkins CI server
 1. Open you Jenkins instance [http://localhost:8080](http://localhost:8080)
-2. Login with the Admin user credentials
-3. Go to Manage Jenkins > Plugins
-4. Click on the Available tab and search for ansible
-5. Install the Ansible plugin
+2. Login with the ***Admin*** user credentials.
+3. Go to ***Manage Jenkins > Plugins*** menu.
+4. Click on the ***Available*** tab and search for *ansible*.
+5. Hit the ***Install without restart*** button.
+
+    Log files:
+       - [08 How to install Ansible plugin on Jenkins 2.332.2](https://youtu.be/FYuV2gKSvBk)
+       - [Terminal log about Ansible installation](logs/07_ansible_installation_vbox-ubuntu-min.txt)
+        
+- ## Create a virtual network having at least one master server and a couple of slaves
+Using any Virtualization tool, create some Virtual Machines with the OS of your preference.
+_The Virtual Machines were created with VirtualBox, and the operating systems are described below:_
+
+| Machine Role | Operating System | VM IP Address | VM Port | Host IP Address  | Host port | Function |
+| -- | -- | -- | -- | --  | -- | -- |
+| Master | Ubuntu Server 20.04.3 | 192.168.100.5 | 2223 | 127.0.0.1  | 22 | ssh |
+| Master | Ubuntu Server 20.04.3 | 192.168.100.5 | 8080 | 127.0.0.1  | 8080 | http_jenkins |
+| Remote | CentOs Server 7 | 192.168.100.4 | 2222 | 127.0.0.1  | 22 | ssh |
+| Remote | CentOs Server 7 | 192.168.100.4 | 8080 | 127.0.0.1  | 8088 | http_tomcat |
+| Remote | Fedora Server 35 | 192.168.100.6 | 2222 | 127.0.0.1  | 22 | ssh |
+
+i.e.
+![Set NAT port forwarding rules](images/set_nat_network_port_forwarding_rules.jpg)
 
 
 - ## Configure Ansible Inventory, Master and Slave Hosts Connection
@@ -200,17 +243,22 @@ Log files:
     >```
 
 
-Configure Jenkins to build with Ansible
+    Log files:
+      - [09 How to configure Ansible Inventory, Master and Slave hosts connection](https://youtu.be/Uiv190CaRO8)
+      - [Ansible configuration log](logs/09_ansible_configuration_vbox-ubuntu-min.txt)
 
+<br/>
 
 - ## Prepare Ansible playbook to run Maven build on Jenkins CI server
 - ## Prepare Ansible playbook to execute deployment steps on the remote web container with restart of the web container post deployment
-ansible
+
+    In this section, there were two main tasks:
+    - Install and setup Apache Tomcat in the Web Server
+    - Integrate Ansible and Maven with Jenkins jobs and pipe lines.
+
+    The videos and scripts followd in the next section describe in detail how the integration was accomplished.
+
  <br />
-
-# References
-- [How To Install Jenkins on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-20-04)
-
 
 # Videos
 - [01 How to install OpenJDK 8 on Ubuntu Server 20.04.3](https://youtu.be/VsXFn_YTGlo)
@@ -224,7 +272,20 @@ ansible
 - [09 How to configure Ansible Inventory, Master and Slave hosts connection](https://youtu.be/Uiv190CaRO8)
 - [10 How to manage Apache Tomcat Service from an Ansible playbook executed by a Jenkins pipeline](https://youtu.be/UCp1_puQVBY)
 - [11 How to Integrate Maven with Jenkins to deploy WAR/WEAR applications](https://youtu.be/HXBHRBTaX54)
-- (https://youtu.be/zp0AiQKyjd4)
+- [12 Example about a Jenkins build to Deploy an application to Apache Tomcat](https://youtu.be/zp0AiQKyjd4)
 - [Adding SSH credentials on Jenkins](https://youtu.be/xOBm-wrCCXo)
 - [Creating a new view on Jenkins](https://youtu.be/Xy3bJDiCjOk)
 - [Running a playbook test on Jenkins](https://youtu.be/BQ8MoWxtFiM)
+
+<br/>
+
+# Scripts
+- [Install Apache Tomcat playbook](scripts/install_apache_tomcat.yaml)
+- [Manage Apache tomcat Service](scripts/apache_tomcat_service.yaml)
+- [Manage Apache tomcat Service Piepeline](scrits/apache_tomcat_service_pipeline.txt)
+- [Deploy sample app](scripts/deploy_sample_war.yaml)
+- [Deploy sample app pipeline](scripts/deploy_pipeline.txt)
+
+
+# References
+- [How To Install Jenkins on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-20-04)

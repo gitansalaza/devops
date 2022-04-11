@@ -289,3 +289,6 @@ i.e.
 
 # References
 - [How To Install Jenkins on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-20-04)
+- [Step-by-step Jenkins Tomcat deploy of a WAR file](https://www.theserverside.com/video/Step-by-step-Jenkins-Tomcat-deploy-of-a-WAR-file)
+- [Install Apache Tomcat On Ubuntu 20.04/18.04 / CentOS 7 With Ansible](https://computingforgeeks.com/install-tomcat-on-ubuntu-centos-with-ansible/)
+- [How to Install Apache tomcat using Ansible.](https://automateinfra.com/2022/01/08/how-to-deploy-apache-tomcat-using-ansible/)

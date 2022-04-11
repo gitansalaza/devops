@@ -5,7 +5,7 @@ Post Graduate Program in DevOps <br/>
 PG DO - Configuration Management with Ansible and Terraform <br/>
 
 - Assigned to: Antonio Salazar Gomez ([antonio.salazar@ymail.com](mailto:antonio.salazar@ymail.com))
-- Updated on:  2022-04-02 
+- Updated on:  2022-04-11 
 - Github repo: [gitansalaza/devops](https://github.com/gitansalaza/devops/blob/main/project_01_ci-cd_deployment_using_ansible_cm_tool.md)
 
 

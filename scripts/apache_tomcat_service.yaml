@@ -26,7 +26,7 @@
       tags: 
         - restart
 
-    - name: restart tomcat
+    - name: reload tomcat
       systemd:
         name: tomcat
         state: reloaded

@@ -253,8 +253,11 @@ i.e.
 - ## Prepare Ansible playbook to execute deployment steps on the remote web container with restart of the web container post deployment
 
     In this section, there were two main tasks:
-    - Install and setup Apache Tomcat in the Web Server
+    - Install and setup Apache Tomcat in the Web Server.
     - Integrate Ansible and Maven with Jenkins jobs and pipe lines.
+
+
+    To install Apache Tomcat, a Jenkins free style job named ***Tomcat_install*** was created, in which the ansible [Install Apache Tomcat playbook](scripts/install_apache_tomcat.yaml) was integrated.
 
     The videos and scripts followd in the next section describe in detail how the integration was accomplished.
 

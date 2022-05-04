@@ -1,4 +1,4 @@
-# Project 1: CI/CD Deployment Using Ansible CM Tool 
+# Project 2: Deployment of WordPress Environment
 
 Caltech | _Center for Technology & Management Education_ | Simpl¡Learn <br/>
 Post Graduate Program in DevOps <br/>

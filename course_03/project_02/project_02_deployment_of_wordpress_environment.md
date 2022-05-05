@@ -119,13 +119,15 @@ _to verify the user creation, run the command below on each host
 
 10)  Test the connection between master and wordpress servers
 > ```
+> cd ~/scripts ;
 > ansible all -i wp_servers.inv -m ping
 > ```
 
 11) Encrypt the **wp_vars.yaml** variables file.
 > ```
 > ./wp_vars.sh
-> ansible-vault encrypt setup_vars.yaml --vault-password-file=.bldkey;
+> ansible-vault encrypt wp_vars.yaml --vault-password-file=.bldkey;
+> ansible-vault view wp_vars.yaml --vault-password-file=.bldkey;
 > ```
 
 12) Install WorkPress on the destination wordpress host.
@@ -757,7 +759,7 @@ _Execute the commands above in both servers: the Master and the WordPress one._
 ## Validate installation using the public IP of VM by accessing WordPress application
 ### Final steps
 
-  1. Open a broswer with the URL: http://localhost:8017/\<app name>/wordpress/ <br />
+  1. Open a broswer with the URL: http://localhost:8017/'\<app name>'/wordpress/ <br />
   
       - _replace the \<app name> with the name of the application you set up during the installation process_
 

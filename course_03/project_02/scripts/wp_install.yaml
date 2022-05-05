@@ -188,12 +188,6 @@
           state: absent
         when: stat_result.stat.exists == False
  
-      - name: Fetch random salts for WordPress config
-        local_action: command curl https://api.wordpress.org/secret-key/1.1/salt/
-        register: "wp_salt"
-        become: no
-        become_method: sudo
-
       - name: Copy WordPress {{ path }}/wordpress/wp-config-sample.php file to {{ path }}/wordpress/wp-config.php
         copy: 
           src: "{{ path }}/wordpress/wp-config-sample.php"

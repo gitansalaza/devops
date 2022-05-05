@@ -759,7 +759,7 @@ _Execute the commands above in both servers: the Master and the WordPress one._
 ## Validate installation using the public IP of VM by accessing WordPress application
 ### Final steps
 
-  1. Open a broswer with the URL: http://localhost:8017/'\<app name>'/wordpress/ <br />
+  1. Open a broswer with the URL: http://localhost:8017/$app_name/wordpress/ <br />
   
       - _replace the \<app name> with the name of the application you set up during the installation process_
 

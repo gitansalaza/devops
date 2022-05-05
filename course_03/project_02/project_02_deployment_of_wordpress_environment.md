@@ -121,7 +121,7 @@ You are a DevOps engineer at XYZ Ltd. Your company is working mostly on WordPres
 > ansible-playbook wp_install.yaml -i wp_servers.inv --extra-vars "server=wp_server" --vault-password-file=.bldkey
 > ```
 
-13) [Validate installation using the public IP of VM by accessing WordPress application](#Validate-installation-using-the-public-IP-of-VM-byaccessing-WordPress-application)
+13) [Validate installation using the public IP of VM by accessing WordPress application](#Final-steps)
 
 <br/>
 

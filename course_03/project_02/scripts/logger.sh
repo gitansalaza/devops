@@ -22,7 +22,7 @@ set_log() {
     export date_stamp=$(date +%Y%m%d_%H%M%S) ;
     # if log_home argument is empty then define the current directory as log_home
     if [ "$#" -lt 1 ]; then
-        export log_home="./" ;
+        export log_home=$(pwd) ;
     else
         export log_home="$1" ;
         # create the log directory if does not exist

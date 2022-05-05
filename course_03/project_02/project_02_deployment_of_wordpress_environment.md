@@ -58,24 +58,25 @@ You are a DevOps engineer at XYZ Ltd. Your company is working mostly on WordPres
 > ```
 > # as root
 > cd ~/ ;
-> git clone --branch scripts https://github.com/gitansalaza/devops.git
+> git clone --branch scripts https://github.com/gitansalaza/devops.git ;
 > ```
 
 2) Create the Ansible **admi**n user on the master host.
 > ```
-> cd devops/course_03/project_02
-> chmod +x *
-> ./setup_user.sh
+> cd devops/course_03/project_02 ;
+> chmod +x * ;
+> ./setup_user.sh ;
 > ```
 
 3) **Repeat** the same **steps 1 and 2** on the **wordpress** host.
 
     _In this example the username is **ansibleadm**_
 
-4) Set the admin's user **SSH** trusted connections between the **master** and **wordpress** hosts.
+4) Switch to admin user and setup the **SSH** trusted connections between the **master** and **wordpress** hosts.
 > ```
-> sudo cp ~/devops/course_03/project_02/* .
-> chmod +x * 
+> su - $admin_username
+> sudo cp -r /root/devops/course_03/project_02/ scripts ;
+> sudo chown -R $USER:$USER ./scripts ;
 > ./setup_sshkey.sh
 > ```
 

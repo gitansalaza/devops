@@ -57,11 +57,11 @@ You are a DevOps engineer at XYZ Ltd. Your company is working mostly on WordPres
 1) Download the script code from github repository to the master host.
 > ```
 > # as root
-> cd ~/ ;
-> git clone --branch scripts https://github.com/gitansalaza/devops.git ;
+> apt-get update && apt-get install git -y ;
+> cd ~/ && git clone --branch scripts https://github.com/gitansalaza/devops.git ;
 > ```
 
-2) Create the Ansible **admi**n user on the master host.
+2) Create the Ansible **admin** user on the master host.
 > ```
 > cd devops/course_03/project_02 ;
 > chmod +x * ;
@@ -75,12 +75,18 @@ You are a DevOps engineer at XYZ Ltd. Your company is working mostly on WordPres
 4) Switch to admin user and setup the **SSH** trusted connections between the **master** and **wordpress** hosts.
 > ```
 > su - $admin_username
+> cd ~/ ;
 > sudo cp -r /root/devops/course_03/project_02/ scripts ;
 > sudo chown -R $USER:$USER ./scripts ;
-> ./setup_sshkey.sh
+> cd scripts ;
+> ./setup_sshkey.sh ;
 > ```
 
-5) Test the Ansible connection between servers.
+_Enter the wordpress name or IP address. After that, accept saving the fingerprint._
+
+![sshkey_setup](images/setup_admin_user_ssh_keys.jpg)
+
+5) Test the Ansible connection between the master and wordpress servers.
 > ```
 > ansible all -i wp_servers.inv -m ping
 > ```
@@ -89,12 +95,17 @@ You are a DevOps engineer at XYZ Ltd. Your company is working mostly on WordPres
 > ```
 > ./setup_vars.sh
 > ansible-vault encrypt setup_vars.yaml --vault-password-file=.stvltkey;
+> ansible-vault view setup_vars.yaml --vault-password-file=.stvltkey;
 > ```
 
 7) Create the **DevOps builder** user account.
 > ```
 > ansible-playbook setup_user.yaml -i wp_servers.inv --extra-vars "server=all" --vault-password-file=.stvltkey ;
 > ```
+
+_to verify the user creation, run the command below on each host
+`id $username`._
+
 
 8) Copy the WordPress server installtion scripts to the **DevOps builder** user home directory.
 > ```

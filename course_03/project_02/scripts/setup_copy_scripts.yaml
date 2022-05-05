@@ -1,9 +1,9 @@
 # Name:        setup_copy_scripts.yaml
-# Description: Copy the wp_server.inv, wp_vars.yaml, and wp_install.yaml to the build user home directory
+# Description: Copy the installation scripts to the build user home directory
 # Author:      Antonio Salazar (antonio.salazar@ymail.com)
 # Date:        2022-04-24
 ---
-  - name: Copy the wp_server.inv, wp_vars.sh, wp_vars.yaml, and wp_install.yaml playbook to /home/{{ build_username }}/scripts on the {{ server }} host
+  - name: Copy the wp_server.inv, wp_vars.sh and wp_install.yaml playbook to /home/{{ build_username }}/scripts on the {{ server }} host
     hosts: "{{ server }}"
     vars_files: ~/scripts/setup_vars.yaml
     vars:
@@ -20,7 +20,7 @@
           group: "{{ build_username }}"
           mode: 0775
 
-      - name: Copy the wp_server.inv , wp_vars.yaml, and wp_install.yaml files tothe  /home/{{ build_username }}/scripts directory
+      - name: Copy the wp_server.inv, wp_vars.sh and wp_install.yaml files tothe  /home/{{ build_username }}/scripts directory
         copy: 
           src: ~/scripts/{{ item }}
           dest: /home/{{ build_username }}/scripts
@@ -31,6 +31,5 @@
         loop:
           - wp_servers.inv
           - wp_vars.sh
-          - wp_vars.yaml
           - wp_install.yaml
 ...

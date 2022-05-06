@@ -103,6 +103,11 @@ _Enter the wordpress name or IP address. After that, accept saving the fingerpri
 6) Create the admin user variables and vault key.
 > ```
 > ./setup_vars.sh
+> ansible-vault encrypt setup_vars.yaml --vault-password-file=.stvltkey 2> error.txt ;
+> err=`grep 'ERROR! input is already encrypted' error.txt | wc -l` ;
+> if [ $err -eq 1 ]; then
+>   ansible-vault decrypt setup_vars.yaml --vault-password-file=.stvltkey;
+> fi
 > ansible-vault encrypt setup_vars.yaml --vault-password-file=.stvltkey;
 > ansible-vault view setup_vars.yaml --vault-password-file=.stvltkey;
 > ```

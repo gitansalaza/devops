@@ -72,6 +72,15 @@ You are a DevOps engineer at XYZ Ltd. Your company is working mostly on WordPres
 
     _In this example the username is **ansibleadm**_
 
+- Suppress the python version warnings from ansible playbook executions
+> ```
+> pywarn=`grep -E '^interpreter_python=auto_silent' /etc/ansible/ansible.cfg | wc -l`;
+> if [ $pywarn -eq 0 ]; then
+>   sed '/^\[defaults\]/a interpreter_python=auto_silent' /etc/ansible/ansible.cfg > /etc/ansible/ansible.cfg.new ;
+>  mv /etc/ansible/ansible.cfg.new /etc/ansible/ansible.cfg ;
+> fi ;
+> ```
+
 4) Switch to admin user and setup the **SSH** trusted connections between the **master** and **wordpress** hosts.
 > ```
 > su - $admin_username
@@ -86,7 +95,7 @@ _Enter the wordpress name or IP address. After that, accept saving the fingerpri
 
 ![sshkey_setup](images/setup_admin_user_ssh_keys.jpg)
 
-5) Test the Ansible connection between the master and wordpress servers.
+1) Test the Ansible connection between the master and wordpress servers.
 > ```
 > ansible all -i wp_servers.inv -m ping
 > ```

@@ -95,7 +95,7 @@ _Enter the wordpress name or IP address. After that, accept saving the fingerpri
 
 ![sshkey_setup](images/setup_admin_user_ssh_keys.jpg)
 
-1) Test the Ansible connection between the master and wordpress servers.
+5) Test the Ansible connection between the master and wordpress servers.
 > ```
 > ansible all -i wp_servers.inv -m ping
 > ```

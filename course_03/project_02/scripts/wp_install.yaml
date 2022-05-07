@@ -221,4 +221,16 @@
           state: directory 
           recurse: yes 
           setype: httpd_sys_content_t
+
+      - name: Restart Apache Web service on Debian OS family
+        service:
+              name: apache2 
+              state: restarted
+        when: ansible_os_family=="Debian"
+
+      - name: Restart Apache Web service on RHEL OS family
+        service:
+              name: httpd
+              state: restarted
+        when: ansible_os_family=="RedHat"
 ...

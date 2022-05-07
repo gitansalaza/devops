@@ -1,0 +1,194 @@
+-------------------------------------------------------
+Setup and encrypt the wp_vars.yaml vault file.
+-------------------------------------------------------
+Please input the 'Vault Password': ****
+The build username is devops
+Enter the devops user password: ******
+.............................
+- WordPress variables setup -
+.............................
+The Admin DB user is named 'root'
+Please enter the DB admin user root password': ****
+- WordPress DB variables -
+Please enter the DB name: wordpress
+Please enter the DB user: wp_db
+Please enter the DB wp_db user password: ********
+- WordPress App variables -
+The WordPress installation path is /var/www/html
+Please enter the application name: wp_app
+The file 'wp_vars.yaml' has been created successfully.
+Encrypt the 'wp_vars.yaml' file . . .
+Encryption successful
+devops@vbox-ubuntu20-min:~/scripts$ ansible-vault encrypt wp_vars.yaml --vault-password-file=.bldkey;
+ERROR! input is already encrypted
+devops@vbox-ubuntu20-min:~/scripts$ ansible-vault decrypt wp_vars.yaml --vault-password-file=.bldkey;
+Decryption successful
+devops@vbox-ubuntu20-min:~/scripts$ ansible-vault encrypt wp_vars.yaml --vault-password-file=.bldkey;
+Encryption successful
+devops@vbox-ubuntu20-min:~/scripts$ ansible-vault view wp_vars.yaml --vault-password-file=.bldkey;
+---
+build_username: devops
+build_password: dev0ps
+root_passwd: r00t
+db_user: wp_db
+db_passwd: wp_db123
+db_name: wordpress
+install_path: /var/www/html
+app_name: wp_app
+table_prefix: 'wp_'
+debug_mode: 'FALSE'
+...
+devops@vbox-ubuntu20-min:~/scripts$ cat wp_vars.yaml
+$ANSIBLE_VAULT;1.1;AES256
+62613833366134353534313763346562306662323038316637376631383334373435623335393830
+3235363830313937323433343864343137303932646436350a336536633032393033343033376261
+31336665663632616233343337386463323964623461383232356237346339323365353661333561
+3435653731353566640a613731326430303136613966333764383262346536303232666333656161
+63666433353361666632646562396264316239353537636235336137343433376232323464363966
+66313833613136313762333339653966623763386138363363393833643934316137306366313130
+64366633313631643430353765323132393966646532333539363764336461373738646139623538
+33353337323331316365363432346433303331343436326438656364383830396163623132383735
+35626132623330643463336530646335323736363831373935376561383263386161383738303737
+65303864323966636337316536373135643739333838336663356331663634623030653661643064
+37323935616463623864333662313661646236643530653334363931613934323661626665623434
+36663766343433323533366433323037336530313837333066663933323833623439343662333262
+31623536316333343936356430343038373063323762653439653536386334623461666462366230
+36633239383262643932636534303462663432363330613136636133393161306233346265653162
+646132316531366563643965663464643330
+devops@vbox-ubuntu20-min:~/scripts$ ansible-playbook wp_install.yaml -i wp_servers.inv --extra-vars "server=wp_server" --vault-password-file=.bldkey
+
+PLAY [Setup the WordPress Server on wp_server host] **********************************************************************************************************************************************************
+
+TASK [Gathering Facts] ***************************************************************************************************************************************************************************************
+ok: [192.168.70.17]
+
+TASK [Install Apache Web Server package on Debian OS family] *************************************************************************************************************************************************
+changed: [192.168.70.17]
+
+TASK [Install Apache Web Server package on RHEL OS family] ***************************************************************************************************************************************************
+skipping: [192.168.70.17]
+
+TASK [Install PHP packages on Debian OS family] **************************************************************************************************************************************************************
+changed: [192.168.70.17] => (item=libapache2-mod-php)
+changed: [192.168.70.17] => (item=php)
+ok: [192.168.70.17] => (item=php-common)
+changed: [192.168.70.17] => (item=php-mysql)
+changed: [192.168.70.17] => (item=php-tidy)
+changed: [192.168.70.17] => (item=php-xml)
+changed: [192.168.70.17] => (item=php-xmlrpc)
+changed: [192.168.70.17] => (item=php-mbstring)
+changed: [192.168.70.17] => (item=php-memcached)
+changed: [192.168.70.17] => (item=php-curl)
+changed: [192.168.70.17] => (item=php-zip)
+changed: [192.168.70.17] => (item=php-pear)
+changed: [192.168.70.17] => (item=php-cgi)
+changed: [192.168.70.17] => (item=php-net-socket)
+changed: [192.168.70.17] => (item=php-gd)
+ok: [192.168.70.17] => (item=php-xml-util)
+changed: [192.168.70.17] => (item=php-php-gettext)
+changed: [192.168.70.17] => (item=php-bcmath)
+ok: [192.168.70.17] => (item=unzip)
+ok: [192.168.70.17] => (item=wget)
+ok: [192.168.70.17] => (item=python3)
+changed: [192.168.70.17] => (item=python3-pip)
+changed: [192.168.70.17] => (item=python3-mysqldb)
+
+TASK [Install PHP packages on RHEL OS family] ****************************************************************************************************************************************************************
+skipping: [192.168.70.17] => (item=libapache2-mod-php)
+skipping: [192.168.70.17] => (item=php)
+skipping: [192.168.70.17] => (item=php-common)
+skipping: [192.168.70.17] => (item=php-mysql)
+skipping: [192.168.70.17] => (item=php-tidy)
+skipping: [192.168.70.17] => (item=php-xml)
+skipping: [192.168.70.17] => (item=php-xmlrpc)
+skipping: [192.168.70.17] => (item=php-mbstring)
+skipping: [192.168.70.17] => (item=php-memcached)
+skipping: [192.168.70.17] => (item=php-curl)
+skipping: [192.168.70.17] => (item=php-zip)
+skipping: [192.168.70.17] => (item=php-pear)
+skipping: [192.168.70.17] => (item=php-cgi)
+skipping: [192.168.70.17] => (item=php-net-socket)
+skipping: [192.168.70.17] => (item=php-gd)
+skipping: [192.168.70.17] => (item=php-xml-util)
+skipping: [192.168.70.17] => (item=php-php-gettext)
+skipping: [192.168.70.17] => (item=php-bcmath)
+skipping: [192.168.70.17] => (item=unzip)
+skipping: [192.168.70.17] => (item=wget)
+skipping: [192.168.70.17] => (item=python3)
+skipping: [192.168.70.17] => (item=python3-pip)
+skipping: [192.168.70.17] => (item=python3-mysqldb)
+
+TASK [Install PyMySQL package] *******************************************************************************************************************************************************************************
+changed: [192.168.70.17]
+
+TASK [Setup MariaDB repository] ******************************************************************************************************************************************************************************
+changed: [192.168.70.17]
+
+TASK [Install MariaDB latest on Debian OS family] ************************************************************************************************************************************************************
+changed: [192.168.70.17] => (item=mariadb-server)
+changed: [192.168.70.17] => (item=mariadb-client)
+
+TASK [Install MariaDB latest RHEL OS family] *****************************************************************************************************************************************************************
+skipping: [192.168.70.17] => (item=mariadb-server)
+skipping: [192.168.70.17] => (item=mariadb-client)
+
+TASK [Restart MariaDB service] *******************************************************************************************************************************************************************************
+changed: [192.168.70.17]
+
+TASK [Verify if /home/devops/scripts if exists] **************************************************************************************************************************************************************
+ok: [192.168.70.17]
+
+TASK [Create /home/devops/scripts if does not exist] *********************************************************************************************************************************************************
+changed: [192.168.70.17]
+
+TASK [Setup the mysql_secure_installation.sql DB init script] ************************************************************************************************************************************************
+changed: [192.168.70.17]
+
+TASK [Execute the mysql_secure_installation.sql DB init script] **********************************************************************************************************************************************
+changed: [192.168.70.17]
+
+TASK [Setup the mysql_create_db.sql DB script] ***************************************************************************************************************************************************************
+changed: [192.168.70.17]
+
+TASK [Execute the mysql_create_db.sql DB script] *************************************************************************************************************************************************************
+changed: [192.168.70.17]
+
+TASK [Concantenate the install and directory into 'path' single variable] ************************************************************************************************************************************
+ok: [192.168.70.17]
+
+TASK [Ensure that installation directory /var/www/html/wp_app exists] ****************************************************************************************************************************************
+changed: [192.168.70.17]
+
+TASK [Install WordPress when /var/www/html/wp_app/wordpress/index.php is not found] **************************************************************************************************************************
+ok: [192.168.70.17]
+
+TASK [Download WordPress to /var/www/html/wp_app] ************************************************************************************************************************************************************
+changed: [192.168.70.17]
+
+TASK [Remove /var/www/html/wp_app/latest.zip] ****************************************************************************************************************************************************************
+changed: [192.168.70.17]
+
+TASK [Copy WordPress /var/www/html/wp_app/wordpress/wp-config-sample.php file to /var/www/html/wp_app/wordpress/wp-config.php] *******************************************************************************
+changed: [192.168.70.17]
+
+TASK [Ensure /var/www/html/wp_app/wordpress/wp-config.php exists] ********************************************************************************************************************************************
+skipping: [192.168.70.17]
+
+TASK [Execute the mysql_secure_installation.sql DB init script] **********************************************************************************************************************************************
+[WARNING]: Consider using the replace, lineinfile or template module rather than running 'sed'.  If you need to use command because replace, lineinfile or template is insufficient you can add 'warn: false'
+to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+changed: [192.168.70.17]
+
+TASK [Change ownership of installation directory] ************************************************************************************************************************************************************
+changed: [192.168.70.17]
+
+TASK [Restart Apache Web service on Debian OS family] ********************************************************************************************************************************************************
+changed: [192.168.70.17]
+
+TASK [Restart Apache Web service on RHEL OS family] **********************************************************************************************************************************************************
+skipping: [192.168.70.17]
+
+PLAY RECAP ***************************************************************************************************************************************************************************************************
+192.168.70.17              : ok=22   changed=18   unreachable=0    failed=0    skipped=5    rescued=0    ignored=0
+
+devops@vbox-ubuntu20-min:~/scripts$

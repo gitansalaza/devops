@@ -803,6 +803,7 @@ _Execute the commands above in both servers: the Master and the WordPress one._
 <br/>
 
 # Videos
+[Install WordPress with Ansible](https://youtu.be/IgdnnXcqIzs)
 
 <br/>
 

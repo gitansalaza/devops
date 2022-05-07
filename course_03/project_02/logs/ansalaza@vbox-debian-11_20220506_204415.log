@@ -1,0 +1,29 @@
+root@vbox-debian-11:~# cd ~/ && git clone --branch scripts https://github.com/gitansalaza/devops.git ;
+Cloning into 'devops'...
+remote: Enumerating objects: 235, done.
+remote: Counting objects: 100% (235/235), done.
+remote: Compressing objects: 100% (182/182), done.
+remote: Total 235 (delta 93), reused 183 (delta 48), pack-reused 0
+Receiving objects: 100% (235/235), 4.27 MiB | 3.03 MiB/s, done.
+Resolving deltas: 100% (93/93), done.
+root@vbox-debian-11:~# cd devops/course_03/project_02 ;
+root@vbox-debian-11:~/devops/course_03/project_02# chmod +x * ;
+root@vbox-debian-11:~/devops/course_03/project_02# ./setup_user.sh ;
+===========================================================
+Script:   setup_user
+Hostname: vbox-debian-11
+Date:     Fri 06 May 2022 08:22:06 PM CDT
+Log:      ./logs/setup_user_20220506_202206.log
+===========================================================
+2022-05-06T20:22:06:INFO: Starting process...
+2022-05-06T20:22:06:INFO: OS family debian
+Please enter the username: ansibleadm
+Please enter the ansibleadm password: *****
+2022-05-06T20:22:13:INFO: Verify whether the ansibleadm exists
+2022-05-06T20:22:13:INFO: Add user ansibleadm
+2022-05-06T20:22:14:INFO: Grant sudoers privilege
+2022-05-06T20:22:14:INFO: Backup sudoers file
+2022-05-06T20:22:14:INFO: Process completed successfully.
+root@vbox-debian-11:~/devops/course_03/proj                                                                                                                                                                   root@vbox-debian-11:~/devops/course_03/project_02# id devops
+uid=1002(devops) gid=1002(devops) groups=1002(devops),27(sudo)
+root@vbox-debian-11:~/devops/course_03/project_02#

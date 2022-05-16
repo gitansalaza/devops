@@ -1,0 +1,825 @@
+ansalaza@vbox-ubuntu-desktop-20:~$ git --version
+
+Command 'git' not found, but can be installed with:
+
+sudo apt install git
+
+ansalaza@vbox-ubuntu-desktop-20:~$ sudo apt-get update && sudo apt-get install git -y
+[sudo] password for ansalaza: 
+Sorry, try again.
+[sudo] password for ansalaza: 
+Hit:1 http://mx.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://mx.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]                
+Get:4 http://mx.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]             
+Get:5 http://mx.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1 789 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/main i386 Packages [432 kB]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1 450 kB]  
+Get:8 http://mx.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [650 kB]
+Get:9 http://mx.archive.ubuntu.com/ubuntu focal-updates/main Translation-en [329 kB]        
+Get:10 http://mx.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [277 kB]  
+Get:11 http://mx.archive.ubuntu.com/ubuntu focal-updates/main DEP-11 48x48 Icons [60.8 kB]             
+Get:12 http://mx.archive.ubuntu.com/ubuntu focal-updates/main DEP-11 64x64 Icons [98.3 kB]             
+Get:13 http://mx.archive.ubuntu.com/ubuntu focal-updates/main amd64 c-n-f Metadata [15.1 kB]                   
+Get:14 http://mx.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [972 kB]                  
+Get:15 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [249 kB]                                                                                                                      
+Get:16 http://mx.archive.ubuntu.com/ubuntu focal-updates/restricted i386 Packages [24.3 kB]                                                                                                               
+Get:17 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [40.8 kB]                                                                                                              
+Get:18 http://mx.archive.ubuntu.com/ubuntu focal-updates/restricted Translation-en [138 kB]                                                                                                               
+Get:19 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [10.2 kB]                                                                                                               
+Get:20 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [911 kB]                                                                                                                
+Get:21 http://mx.archive.ubuntu.com/ubuntu focal-updates/restricted amd64 c-n-f Metadata [528 B]                                                                                                          
+Get:22 http://mx.archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [921 kB]                                                                                                                 
+Get:23 http://mx.archive.ubuntu.com/ubuntu focal-updates/universe i386 Packages [679 kB]                                                                                                                  
+Get:24 http://security.ubuntu.com/ubuntu focal-security/restricted i386 Packages [22.0 kB]                                                                                                                
+Get:25 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [130 kB]                                                                                                                
+Get:26 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 c-n-f Metadata [532 B]                                                                                                           
+Get:27 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [702 kB]                                                                                                                  
+Get:28 http://mx.archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [206 kB]                                                                                                                 
+Get:29 http://mx.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [391 kB]                                                                                                          
+Get:30 http://mx.archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [20.6 kB]                                                                                                          
+Get:31 http://mx.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [944 B]                                                                                                         
+Get:32 http://mx.archive.ubuntu.com/ubuntu focal-backports/main i386 Packages [34.8 kB]                                                                                                                   
+Get:33 http://mx.archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [42.2 kB]                                                                                                                  
+Get:34 http://mx.archive.ubuntu.com/ubuntu focal-backports/main Translation-en [10.1 kB]                                                                                                                  
+Get:35 http://mx.archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [9 588 B]                                                                                                           
+Get:36 http://mx.archive.ubuntu.com/ubuntu focal-backports/main DEP-11 48x48 Icons [6 961 B]                                                                                                              
+Get:37 http://mx.archive.ubuntu.com/ubuntu focal-backports/main DEP-11 64x64 Icons [10.5 kB]                                                                                                              
+Get:38 http://mx.archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [864 B]                                                                                                              
+Get:39 http://mx.archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [22.7 kB]                                                                                                              
+Get:40 http://mx.archive.ubuntu.com/ubuntu focal-backports/universe i386 Packages [12.8 kB]                                                                                                               
+Get:41 http://mx.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [30.8 kB]                                                                                                       
+Get:42 http://mx.archive.ubuntu.com/ubuntu focal-backports/universe DEP-11 48x48 Icons [13.2 kB]                                                                                                          
+Get:43 http://mx.archive.ubuntu.com/ubuntu focal-backports/universe DEP-11 64x64 Icons [22.6 kB]                                                                                                          
+Get:44 http://mx.archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [804 B]                                                                                                          
+Get:45 http://security.ubuntu.com/ubuntu focal-security/universe i386 Packages [550 kB]                                                                                                                   
+Get:46 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [125 kB]                                                                                                                  
+Get:47 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [66.6 kB]                                                                                                          
+Get:48 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [14.4 kB]                                                                                                           
+Get:49 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [2 464 B]                                                                                                        
+Fetched 11.8 MB in 13s (930 kB/s)                                                                                                                                                                         
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libfwupdplugin1 libllvm11
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git git-man liberror-perl
+0 upgraded, 3 newly installed, 0 to remove and 73 not upgraded.
+Need to get 5 471 kB of archives.
+After this operation, 38.4 MB of additional disk space will be used.
+Get:1 http://mx.archive.ubuntu.com/ubuntu focal/main amd64 liberror-perl all 0.17029-1 [26.5 kB]
+Get:2 http://mx.archive.ubuntu.com/ubuntu focal-updates/main amd64 git-man all 1:2.25.1-1ubuntu3.4 [885 kB]
+Get:3 http://mx.archive.ubuntu.com/ubuntu focal-updates/main amd64 git amd64 1:2.25.1-1ubuntu3.4 [4 560 kB]
+Fetched 5 471 kB in 2s (2 278 kB/s)  
+Selecting previously unselected package liberror-perl.
+(Reading database ... 158449 files and directories currently installed.)
+Preparing to unpack .../liberror-perl_0.17029-1_all.deb ...
+Unpacking liberror-perl (0.17029-1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a2.25.1-1ubuntu3.4_all.deb ...
+Unpacking git-man (1:2.25.1-1ubuntu3.4) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a2.25.1-1ubuntu3.4_amd64.deb ...
+Unpacking git (1:2.25.1-1ubuntu3.4) ...
+Setting up liberror-perl (0.17029-1) ...
+Setting up git-man (1:2.25.1-1ubuntu3.4) ...
+Setting up git (1:2.25.1-1ubuntu3.4) ...
+Processing triggers for man-db (2.9.1-1) ...
+ansalaza@vbox-ubuntu-desktop-20:~$ git --version
+git version 2.25.1
+ansalaza@vbox-ubuntu-desktop-20:~$ cd ~/projects/devops/bmd
+bash: cd: /home/ansalaza/projects/devops/bmd: No such file or directory
+ansalaza@vbox-ubuntu-desktop-20:~$ mkdir -p ~/projects/devops/bmd
+ansalaza@vbox-ubuntu-desktop-20:~$ cd ~/projects/devops/bmd
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git init
+Initialized empty Git repository in /home/ansalaza/projects/devops/bmd/.git/
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git config --list
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git config --global user.name "Antonio Salazar"
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git config --global user.email "antonio.salazar@ymail.com"
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git config --global color.ui true
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git config --global core.editor vi
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git config --list
+user.name=Antonio Salazar
+user.email=antonio.salazar@ymail.com
+color.ui=true
+core.editor=vi
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ 
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ tee Readme.md 0<< EOF
+> # Project structure
+> Branches
+> - Production (master)
+> - HotFix
+> - Integration
+> - Feature1
+> - Feautre2
+> EOF
+# Project structure
+Branches
+- Production (master)
+- HotFix
+- Integration
+- Feature1
+- Feautre2
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Readme.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git add .
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git commit -m "First commit"
+[master (root-commit) bcf3cef] First commit
+ 1 file changed, 7 insertions(+)
+ create mode 100644 Readme.md
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git log
+commit bcf3cef562bd01b40b1bc4f298ff54081b8c04d1 (HEAD -> master)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:24:05 2022 -0500
+
+    First commit
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ 
+
+
+
+
+
+
+
+
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git branch HotFix
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git branch Integration
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git branch
+  HotFix
+  Integration
+* master
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout HotFix && ls
+Switched to branch 'HotFix'
+Readme.md
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout Integration && ls
+Switched to branch 'Integration'
+Readme.md
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git branch Feature1
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git branch Feature2
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git branch
+  Feature1
+  Feature2
+  HotFix
+* Integration
+  master
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout Feature1 && ls
+Switched to branch 'Feature1'
+Readme.md
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout Feature2 && ls
+Switched to branch 'Feature2'
+Readme.md
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout master && ls
+Switched to branch 'master'
+Readme.md
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout Feature2
+Switched to branch 'Feature2'
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ echo "---" >> Readme.md
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ echo "Feature2: edit 1" >> Readme.md
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git add .
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git commit -m "Feature2: edit-1 over Readme.md"
+[Feature2 76618c4] Feature2: edit-1 over Readme.md
+ 1 file changed, 2 insertions(+)
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git log
+commit 76618c45e207d8bb3f284907747a9057c63ab538 (HEAD -> Feature2)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:32:30 2022 -0500
+
+    Feature2: edit-1 over Readme.md
+
+commit bcf3cef562bd01b40b1bc4f298ff54081b8c04d1 (master, Integration, HotFix, Feature1)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:24:05 2022 -0500
+
+    First commit
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ gitd() {
+>   first=`git log --oneline | tail -n 1 | cut -f 1 -d " "`;
+>   last=`git log --oneline | head -n 1 | cut -f 1 -d " "`;
+>   git diff $first $last ;
+> }
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ gitd
+diff --git a/Readme.md b/Readme.md
+index 17a1577..dc18c64 100644
+--- a/Readme.md
++++ b/Readme.md
+@@ -5,3 +5,5 @@ Branches
+ - Integration
+ - Feature1
+ - Feautre2
++---
++Feature2: edit 1
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ ^C
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout Integration
+Switched to branch 'Integration'
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git log
+commit bcf3cef562bd01b40b1bc4f298ff54081b8c04d1 (HEAD -> Integration, master, HotFix, Feature1)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:24:05 2022 -0500
+
+    First commit
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git merge Feature2
+Updating bcf3cef..76618c4
+Fast-forward
+ Readme.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git log
+commit 76618c45e207d8bb3f284907747a9057c63ab538 (HEAD -> Integration, Feature2)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:32:30 2022 -0500
+
+    Feature2: edit-1 over Readme.md
+
+commit bcf3cef562bd01b40b1bc4f298ff54081b8c04d1 (master, HotFix, Feature1)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:24:05 2022 -0500
+
+    First commit
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git status
+On branch Integration
+nothing to commit, working tree clean
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git branch -d Feature2
+Deleted branch Feature2 (was 76618c4).
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git log
+commit 76618c45e207d8bb3f284907747a9057c63ab538 (HEAD -> Integration)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:32:30 2022 -0500
+
+    Feature2: edit-1 over Readme.md
+
+commit bcf3cef562bd01b40b1bc4f298ff54081b8c04d1 (master, HotFix, Feature1)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:24:05 2022 -0500
+
+    First commit
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout Feature1
+Switched to branch 'Feature1'
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ echo "---" >> Readme.md
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ echo "Feature1: edit 1" >> Readme.md
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git add .
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git commit -m "Feature1: edit-1 over Readme.md"  
+[Feature1 16e4f87] Feature1: edit-1 over Readme.md
+ 1 file changed, 2 insertions(+)
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git log
+commit 16e4f87cf423b1ccb88d569f92cafad7c89cb589 (HEAD -> Feature1)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 23:01:32 2022 -0500
+
+    Feature1: edit-1 over Readme.md
+
+commit bcf3cef562bd01b40b1bc4f298ff54081b8c04d1 (master, HotFix)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:24:05 2022 -0500
+
+    First commit
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ gitd
+diff --git a/Readme.md b/Readme.md
+index 17a1577..8dd815c 100644
+--- a/Readme.md
++++ b/Readme.md
+@@ -5,3 +5,5 @@ Branches
+ - Integration
+ - Feature1
+ - Feautre2
++---
++Feature1: edit 1
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git rebase Integration
+First, rewinding head to replay your work on top of it...
+Applying: Feature1: edit-1 over Readme.md
+Using index info to reconstruct a base tree...
+M	Readme.md
+Falling back to patching base and 3-way merge...
+Auto-merging Readme.md
+CONFLICT (content): Merge conflict in Readme.md
+error: Failed to merge in the changes.
+Patch failed at 0001 Feature1: edit-1 over Readme.md
+hint: Use 'git am --show-current-patch' to see the failed patch
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ vi Readme.md 
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ cat Readme.md
+# Project structure
+Branches
+- Production (master)
+- HotFix
+- Integration
+- Feature1
+- Feautre2
+---
+Feature2: edit 1
+---
+Feature1: edit 1
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git add Readme.md
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git rebase --continue
+Applying: Feature1: edit-1 over Readme.md
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git status
+On branch Feature1
+nothing to commit, working tree clean
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ gitd
+diff --git a/Readme.md b/Readme.md
+index 17a1577..488cde0 100644
+--- a/Readme.md
++++ b/Readme.md
+@@ -5,3 +5,7 @@ Branches
+ - Integration
+ - Feature1
+ - Feautre2
++---
++Feature2: edit 1
++---
++Feature1: edit 1
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ 
+
+
+
+
+
+
+
+
+
+
+
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout HotFix && git merge Integration && git log
+Switched to branch 'HotFix'
+Updating bcf3cef..76618c4
+Fast-forward
+ Readme.md | 2 ++
+ 1 file changed, 2 insertions(+)
+commit 76618c45e207d8bb3f284907747a9057c63ab538 (HEAD -> HotFix, Integration)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:32:30 2022 -0500
+
+    Feature2: edit-1 over Readme.md
+
+commit bcf3cef562bd01b40b1bc4f298ff54081b8c04d1 (master)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:24:05 2022 -0500
+
+    First commit
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout master && git merge Integration && git log
+Switched to branch 'master'
+Updating bcf3cef..76618c4
+Fast-forward
+ Readme.md | 2 ++
+ 1 file changed, 2 insertions(+)
+commit 76618c45e207d8bb3f284907747a9057c63ab538 (HEAD -> master, Integration, HotFix)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:32:30 2022 -0500
+
+    Feature2: edit-1 over Readme.md
+
+commit bcf3cef562bd01b40b1bc4f298ff54081b8c04d1
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:24:05 2022 -0500
+
+    First commit
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git branch
+  Feature1
+  HotFix
+  Integration
+* master
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout Feature1
+Switched to branch 'Feature1'
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ sed 's/Feautre2/Feature2/g' Readme.md > Readme.md.new && mv Readme.md.new Readme.md
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ cat Readme.md
+# Project structure
+Branches
+- Production (master)
+- HotFix
+- Integration
+- Feature1
+- Feature2
+---
+Feature2: edit 1
+---
+Feature1: edit 1
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git add . 
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git commit -m "Fix: replaced 'Feautre2' by 'Feature2'" 
+[Feature1 decc2ea] Fix: replaced 'Feautre2' by 'Feature2'
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git log
+commit decc2ea0e2c28e2df14f191b4edd1ecfffa0cce0 (HEAD -> Feature1)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 23:18:39 2022 -0500
+
+    Fix: replaced 'Feautre2' by 'Feature2'
+
+commit c01221ed68dfc66308d74e1330c02cc4affd0042
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 23:01:32 2022 -0500
+
+    Feature1: edit-1 over Readme.md
+
+commit 76618c45e207d8bb3f284907747a9057c63ab538 (master, Integration, HotFix)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:32:30 2022 -0500
+
+    Feature2: edit-1 over Readme.md
+
+commit bcf3cef562bd01b40b1bc4f298ff54081b8c04d1
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:24:05 2022 -0500
+
+    First commit
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ gitd
+diff --git a/Readme.md b/Readme.md
+index 17a1577..145f4cf 100644
+--- a/Readme.md
++++ b/Readme.md
+@@ -4,4 +4,8 @@ Branches
+ - HotFix
+ - Integration
+ - Feature1
+-- Feautre2
++- Feature2
++---
++Feature2: edit 1
++---
++Feature1: edit 1
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ 
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout Integration && git merge Feature1 && git log --oneline
+Switched to branch 'Integration'
+Updating 76618c4..decc2ea
+Fast-forward
+ Readme.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+decc2ea (HEAD -> Integration, Feature1) Fix: replaced 'Feautre2' by 'Feature2'
+c01221e Feature1: edit-1 over Readme.md
+76618c4 (master, HotFix) Feature2: edit-1 over Readme.md
+bcf3cef First commit
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout HotFix && git merge Feature1 && git log --oneline
+Switched to branch 'HotFix'
+Updating 76618c4..decc2ea
+Fast-forward
+ Readme.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+decc2ea (HEAD -> HotFix, Integration, Feature1) Fix: replaced 'Feautre2' by 'Feature2'
+c01221e Feature1: edit-1 over Readme.md
+76618c4 (master) Feature2: edit-1 over Readme.md
+bcf3cef First commit
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout master && git merge Feature1 && git log --oneline
+Switched to branch 'master'
+Updating 76618c4..decc2ea
+Fast-forward
+ Readme.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+decc2ea (HEAD -> master, Integration, HotFix, Feature1) Fix: replaced 'Feautre2' by 'Feature2'
+c01221e Feature1: edit-1 over Readme.md
+76618c4 Feature2: edit-1 over Readme.md
+bcf3cef First commit
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git branch -d Feature1 && git log --oneline 
+Deleted branch Feature1 (was decc2ea).
+decc2ea (HEAD -> master, Integration, HotFix) Fix: replaced 'Feautre2' by 'Feature2'
+c01221e Feature1: edit-1 over Readme.md
+76618c4 Feature2: edit-1 over Readme.md
+bcf3cef First commit
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout HotFix
+Switched to branch 'HotFix'
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ echo "---" >> Readme.md && echo "HotFix: edit-1 on Readme.md" >> Readme.md && git status
+On branch HotFix
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   Readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git add . 
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git commit -m "Hotfix: edit-1 on Readme" 
+[HotFix 94c3efd] Hotfix: edit-1 on Readme
+ 1 file changed, 2 insertions(+)
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git status 
+On branch HotFix
+nothing to commit, working tree clean
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git log
+commit 94c3efd968883beffcf843799ed958dfcde61ad1 (HEAD -> HotFix)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 23:23:43 2022 -0500
+
+    Hotfix: edit-1 on Readme
+
+commit decc2ea0e2c28e2df14f191b4edd1ecfffa0cce0 (master, Integration)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 23:18:39 2022 -0500
+
+    Fix: replaced 'Feautre2' by 'Feature2'
+
+commit c01221ed68dfc66308d74e1330c02cc4affd0042
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 23:01:32 2022 -0500
+
+    Feature1: edit-1 over Readme.md
+
+commit 76618c45e207d8bb3f284907747a9057c63ab538
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:32:30 2022 -0500
+
+    Feature2: edit-1 over Readme.md
+
+commit bcf3cef562bd01b40b1bc4f298ff54081b8c04d1
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:24:05 2022 -0500
+
+    First commit
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ 
+
+
+
+
+
+
+
+
+
+
+
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout master && git merge HotFix && git log
+Switched to branch 'master'
+Updating decc2ea..94c3efd
+Fast-forward
+ Readme.md | 2 ++
+ 1 file changed, 2 insertions(+)
+commit 94c3efd968883beffcf843799ed958dfcde61ad1 (HEAD -> master, HotFix)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 23:23:43 2022 -0500
+
+    Hotfix: edit-1 on Readme
+
+commit decc2ea0e2c28e2df14f191b4edd1ecfffa0cce0 (Integration)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 23:18:39 2022 -0500
+
+    Fix: replaced 'Feautre2' by 'Feature2'
+
+commit c01221ed68dfc66308d74e1330c02cc4affd0042
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 23:01:32 2022 -0500
+
+    Feature1: edit-1 over Readme.md
+
+commit 76618c45e207d8bb3f284907747a9057c63ab538
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:32:30 2022 -0500
+
+    Feature2: edit-1 over Readme.md
+
+commit bcf3cef562bd01b40b1bc4f298ff54081b8c04d1
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:24:05 2022 -0500
+
+    First commit
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ git checkout Integration && git merge HotFix && git log
+Switched to branch 'Integration'
+Updating decc2ea..94c3efd
+Fast-forward
+ Readme.md | 2 ++
+ 1 file changed, 2 insertions(+)
+commit 94c3efd968883beffcf843799ed958dfcde61ad1 (HEAD -> Integration, master, HotFix)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 23:23:43 2022 -0500
+
+    Hotfix: edit-1 on Readme
+
+commit decc2ea0e2c28e2df14f191b4edd1ecfffa0cce0
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 23:18:39 2022 -0500
+
+    Fix: replaced 'Feautre2' by 'Feature2'
+
+commit c01221ed68dfc66308d74e1330c02cc4affd0042
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 23:01:32 2022 -0500
+
+    Feature1: edit-1 over Readme.md
+
+commit 76618c45e207d8bb3f284907747a9057c63ab538
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:32:30 2022 -0500
+
+    Feature2: edit-1 over Readme.md
+
+commit bcf3cef562bd01b40b1bc4f298ff54081b8c04d1
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sun May 15 22:24:05 2022 -0500
+
+    First commit
+ansalaza@vbox-ubuntu-desktop-20:~/projects/devops/bmd$ 
+

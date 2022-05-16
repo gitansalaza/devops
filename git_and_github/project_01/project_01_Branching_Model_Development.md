@@ -5,7 +5,7 @@ Post Graduate Program in DevOps <br/>
 PG DO - Git and GitHub Training <br/>
 
 - Assigned to: Antonio Salazar Gomez ([antonio.salazar@ymail.com](mailto:antonio.salazar@ymail.com))
-- Updated on:  2022-05-11 
+- Updated on:  2022-05-15 
 - Github repo: [gitansalaza/devops/git_and_github/project_01/project_01_Branching_Model_Development.md](https://github.com/gitansalaza/devops/blob/main/git_and_github/project_01/project_01_Branching_Model_Development.md)
 
 <br/>

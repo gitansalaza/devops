@@ -6,7 +6,7 @@ PG DO - Configuration Management with Ansible and Terraform <br/>
 
 - Assigned to: Antonio Salazar Gomez ([antonio.salazar@ymail.com](mailto:antonio.salazar@ymail.com))
 - Updated on:  2022-05-21 
-- Github repo: [gitansalaza/devops/course_02/practices/practice_4.3.md](https://github.com/gitansalaza/devops/blob/main/course_03/project_02/project_02_deployment_of_wordpress_environment.md)
+- Github repo: [gitansalaza/devops/course_02/practices/practice_4.3.md](https://github.com/gitansalaza/devops/blob/main/course_02/practices/practice_4.3.md)
 
 # DESCRIPTION
 To install Git on Linux platform and verify the installation.
@@ -70,7 +70,6 @@ Steps to be followed:
 ![Fedora_0](images/4.3_git_install_on_Fedora35_00.jpg)
 ![Fedora_1](images/4.3_git_install_on_Fedora35_01.jpg)
 ![Fedora_2](images/4.3_git_install_on_Fedora35_02.jpg)
-
 
 <br/>
 

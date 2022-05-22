@@ -1,0 +1,133 @@
+Keyboard-interactive authentication prompts from server:
+End of keyboard-interactive prompts from server
+    +----------------------------------------------------------------------+
+    ¦               • MobaXterm Professional Edition v21.5 •               ¦
+    ¦               (SSH client, X server and network tools)               ¦
+    ¦                                                                      ¦
+    ¦ ? SSH session to ansalaza@127.0.0.1                                  ¦
+    ¦   • Direct SSH      :  ?                                             ¦
+    ¦   • SSH compression :  ?                                             ¦
+    ¦   • SSH-browser     :  ?                                             ¦
+    ¦   • X11-forwarding  :  ?  (disabled or not supported by server)      ¦
+    ¦                                                                      ¦
+    ¦ ? For more info, ctrl+click on help or visit our website.            ¦
+    +----------------------------------------------------------------------+
+
+Last login: Sat Apr 16 18:29:20 2022 from 192.168.70.2
+Have a lot of fun...
+ansalaza@vbox-opensuse-leap-15:~> sudo git --version
+[sudo] password for root:
+sudo: git: command not found
+ansalaza@vbox-opensuse-leap-15:~> sudo zypper in git
+Retrieving repository 'Update repository of openSUSE Backports' metadata .....................................................................................[done]
+Building repository 'Update repository of openSUSE Backports' cache ..........................................................................................[done]
+Retrieving repository 'Update repository with updates from SUSE Linux Enterprise 15' metadata ................................................................[done]
+Building repository 'Update repository with updates from SUSE Linux Enterprise 15' cache .....................................................................[done]
+Retrieving repository 'Main Update Repository' metadata ......................................................................................................[done]
+Building repository 'Main Update Repository' cache ...........................................................................................................[done]
+Retrieving repository 'Update Repository (Non-Oss)' metadata .................................................................................................[done]
+Building repository 'Update Repository (Non-Oss)' cache ......................................................................................................[done]
+Loading repository data...
+Reading installed packages...
+Resolving package dependencies...
+
+The following 4 recommended packages were automatically selected:
+  git-cvs git-email git-svn subversion-bash-completion
+
+The following 4 packages are suggested, but will not be installed:
+  git-daemon git-gui gitk git-web
+
+The following 24 NEW packages are going to be installed:
+  bash-completion-devel cvs cvsps git git-core git-cvs git-email git-svn libapr1 libapr-util1 libserf-1-1 libsha1detectcoll1 libutf8proc2 perl-Authen-SASL
+  perl-DBD-SQLite perl-DBI perl-Digest-HMAC perl-Error perl-Git perl-MailTools perl-Net-SMTP-SSL subversion subversion-bash-completion subversion-perl
+
+24 new packages to install.
+Overall download size: 12.5 MiB. Already cached: 0 B. After the operation, additional 55.4 MiB will be used.
+Continue? [y/n/v/...? shows all options] (y): y
+Retrieving package cvs-1.12.12-2.30.x86_64                                                                                    (1/24), 405.1 KiB (962.5 KiB unpacked)
+Retrieving: cvs-1.12.12-2.30.x86_64.rpm ......................................................................................................................[done]
+Retrieving package cvsps-2.1-1.19.x86_64                                                                                      (2/24),  62.9 KiB (128.6 KiB unpacked)
+Retrieving: cvsps-2.1-1.19.x86_64.rpm ............................................................................................................[done (2.8 KiB/s)]
+Retrieving package libapr1-1.6.3-3.3.8.x86_64                                                                                 (3/24), 104.3 KiB (244.5 KiB unpacked)
+Retrieving: libapr1-1.6.3-3.3.8.x86_64.rpm ...................................................................................................................[done]
+Retrieving package libsha1detectcoll1-1.0.3-2.18.x86_64                                                                       (4/24),  23.2 KiB ( 45.8 KiB unpacked)
+Retrieving: libsha1detectcoll1-1.0.3-2.18.x86_64.rpm ...........................................................................................[done (347.2 KiB/s)]
+Retrieving package libutf8proc2-2.1.0-1.7.x86_64                                                                              (5/24),  59.1 KiB (308.7 KiB unpacked)
+Retrieving: libutf8proc2-2.1.0-1.7.x86_64.rpm ................................................................................................................[done]
+Retrieving package perl-DBI-1.642-3.9.1.x86_64                                                                                (6/24), 740.5 KiB (  2.1 MiB unpacked)
+Retrieving: perl-DBI-1.642-3.9.1.x86_64.rpm ....................................................................................................[done (891.2 KiB/s)]
+Retrieving package perl-Digest-HMAC-1.03-1.22.noarch                                                                          (7/24),  16.4 KiB ( 10.5 KiB unpacked)
+Retrieving: perl-Digest-HMAC-1.03-1.22.noarch.rpm ............................................................................................................[done]
+Retrieving package perl-Error-0.17025-1.20.noarch                                                                             (8/24),  40.5 KiB ( 70.5 KiB unpacked)
+Retrieving: perl-Error-0.17025-1.20.noarch.rpm ...............................................................................................................[done]
+Retrieving package perl-MailTools-2.19-1.20.noarch                                                                            (9/24), 102.2 KiB (199.7 KiB unpacked)
+Retrieving: perl-MailTools-2.19-1.20.noarch.rpm ..............................................................................................................[done]
+Retrieving package perl-Net-SMTP-SSL-1.04-1.3.1.noarch                                                                       (10/24),  13.0 KiB (  4.4 KiB unpacked)
+Retrieving: perl-Net-SMTP-SSL-1.04-1.3.1.noarch.rpm ..........................................................................................................[done]
+Retrieving package perl-Authen-SASL-2.16-1.3.1.noarch                                                                        (11/24),  53.8 KiB ( 96.8 KiB unpacked)
+Retrieving: perl-Authen-SASL-2.16-1.3.1.noarch.rpm ...........................................................................................................[done]
+Retrieving package bash-completion-devel-2.7-4.6.1.noarch                                                                    (12/24),  27.5 KiB (  292   B unpacked)
+Retrieving: bash-completion-devel-2.7-4.6.1.noarch.rpm ..........................................................................................[done (82.6 KiB/s)]
+Retrieving package libapr-util1-1.6.1-18.2.1.x86_64                                                                          (13/24),  94.9 KiB (240.5 KiB unpacked)
+Retrieving: libapr-util1-1.6.1-18.2.1.x86_64.rpm .............................................................................................................[done]
+Retrieving package git-core-2.35.3-150300.10.12.1.x86_64                                                                     (14/24),   4.8 MiB ( 26.6 MiB unpacked)
+Retrieving: git-core-2.35.3-150300.10.12.1.x86_64.rpm .........................................................................................[done (1007.6 KiB/s)]
+Retrieving package perl-DBD-SQLite-1.66-150300.3.3.1.x86_64                                                                  (15/24),   1.6 MiB (  8.9 MiB unpacked)
+Retrieving: perl-DBD-SQLite-1.66-150300.3.3.1.x86_64.rpm .......................................................................................[done (949.7 KiB/s)]
+Retrieving package perl-Git-2.35.3-150300.10.12.1.x86_64                                                                     (16/24), 159.6 KiB (231.7 KiB unpacked)
+Retrieving: perl-Git-2.35.3-150300.10.12.1.x86_64.rpm ........................................................................................................[done]
+Retrieving package git-email-2.35.3-150300.10.12.1.x86_64                                                                    (17/24), 118.9 KiB ( 68.9 KiB unpacked)
+Retrieving: git-email-2.35.3-150300.10.12.1.x86_64.rpm .......................................................................................................[done]
+Retrieving package git-cvs-2.35.3-150300.10.12.1.x86_64                                                                      (18/24), 155.6 KiB (216.8 KiB unpacked)
+Retrieving: git-cvs-2.35.3-150300.10.12.1.x86_64.rpm .........................................................................................................[done]
+Retrieving package libserf-1-1-1.3.9-2.31.x86_64                                                                             (19/24),  73.4 KiB (145.3 KiB unpacked)
+Retrieving: libserf-1-1-1.3.9-2.31.x86_64.rpm ................................................................................................................[done]
+Retrieving package subversion-1.10.6-150300.10.8.1.x86_64                                                                    (20/24),   2.7 MiB (  9.8 MiB unpacked)
+Retrieving: subversion-1.10.6-150300.10.8.1.x86_64.rpm ...........................................................................................[done (1.8 MiB/s)]
+Retrieving package subversion-bash-completion-1.10.6-150300.10.8.1.noarch                                                    (21/24),  39.1 KiB ( 47.8 KiB unpacked)
+Retrieving: subversion-bash-completion-1.10.6-150300.10.8.1.noarch.rpm .......................................................................................[done]
+Retrieving package subversion-perl-1.10.6-150300.10.8.1.x86_64                                                               (22/24), 928.3 KiB (  4.9 MiB unpacked)
+Retrieving: subversion-perl-1.10.6-150300.10.8.1.x86_64.rpm ....................................................................................[done (393.5 KiB/s)]
+Retrieving package git-svn-2.35.3-150300.10.12.1.x86_64                                                                      (23/24), 127.3 KiB ( 78.7 KiB unpacked)
+Retrieving: git-svn-2.35.3-150300.10.12.1.x86_64.rpm .........................................................................................................[done]
+Retrieving package git-2.35.3-150300.10.12.1.x86_64                                                                          (24/24), 106.6 KiB ( 49.9 KiB unpacked)
+Retrieving: git-2.35.3-150300.10.12.1.x86_64.rpm .............................................................................................................[done]
+
+Checking for file conflicts: .................................................................................................................................[done]
+( 1/24) Installing: cvs-1.12.12-2.30.x86_64 ..................................................................................................................[done]
+( 2/24) Installing: cvsps-2.1-1.19.x86_64 ....................................................................................................................[done]
+( 3/24) Installing: libapr1-1.6.3-3.3.8.x86_64 ...............................................................................................................[done]
+( 4/24) Installing: libsha1detectcoll1-1.0.3-2.18.x86_64 .....................................................................................................[done]
+( 5/24) Installing: libutf8proc2-2.1.0-1.7.x86_64 ............................................................................................................[done]
+( 6/24) Installing: perl-DBI-1.642-3.9.1.x86_64 ..............................................................................................................[done]
+( 7/24) Installing: perl-Digest-HMAC-1.03-1.22.noarch ........................................................................................................[done]
+( 8/24) Installing: perl-Error-0.17025-1.20.noarch ...........................................................................................................[done]
+( 9/24) Installing: perl-MailTools-2.19-1.20.noarch ..........................................................................................................[done]
+(10/24) Installing: perl-Net-SMTP-SSL-1.04-1.3.1.noarch ......................................................................................................[done]
+(11/24) Installing: perl-Authen-SASL-2.16-1.3.1.noarch .......................................................................................................[done]
+(12/24) Installing: bash-completion-devel-2.7-4.6.1.noarch ...................................................................................................[done]
+(13/24) Installing: libapr-util1-1.6.1-18.2.1.x86_64 .........................................................................................................[done]
+(14/24) Installing: git-core-2.35.3-150300.10.12.1.x86_64 ....................................................................................................[done]
+(15/24) Installing: perl-DBD-SQLite-1.66-150300.3.3.1.x86_64 .................................................................................................[done]
+(16/24) Installing: perl-Git-2.35.3-150300.10.12.1.x86_64 ....................................................................................................[done]
+(17/24) Installing: git-email-2.35.3-150300.10.12.1.x86_64 ...................................................................................................[done]
+(18/24) Installing: git-cvs-2.35.3-150300.10.12.1.x86_64 .....................................................................................................[done]
+(19/24) Installing: libserf-1-1-1.3.9-2.31.x86_64 ............................................................................................................[done]
+Updating /etc/sysconfig/svnserve ...
+(20/24) Installing: subversion-1.10.6-150300.10.8.1.x86_64 ...................................................................................................[done]
+(21/24) Installing: subversion-bash-completion-1.10.6-150300.10.8.1.noarch ...................................................................................[done]
+(22/24) Installing: subversion-perl-1.10.6-150300.10.8.1.x86_64 ..............................................................................................[done]
+(23/24) Installing: git-svn-2.35.3-150300.10.12.1.x86_64 .....................................................................................................[done]
+(24/24) Installing: git-2.35.3-150300.10.12.1.x86_64 .........................................................................................................[done]
+ansalaza@vbox-opensuse-leap-15:~> sudo git --version
+git version 2.35.3
+ansalaza@vbox-opensuse-leap-15:~> sudo shutdown -h now
+
+Remote side unexpectedly closed network connection
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Session stopped
+    - Press <return> to exit tab
+    - Press R to restart session
+    - Press S to save terminal output to file

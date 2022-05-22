@@ -1,0 +1,78 @@
+    +----------------------------------------------------------------------+
+    ¦               • MobaXterm Professional Edition v21.5 •               ¦
+    ¦               (SSH client, X server and network tools)               ¦
+    ¦                                                                      ¦
+    ¦ ? SSH session to ansalaza@127.0.0.1                                  ¦
+    ¦   • Direct SSH      :  ?                                             ¦
+    ¦   • SSH compression :  ?                                             ¦
+    ¦   • SSH-browser     :  ?                                             ¦
+    ¦   • X11-forwarding  :  ?  (remote display is forwarded through SSH)  ¦
+    ¦                                                                      ¦
+    ¦ ? For more info, ctrl+click on help or visit our website.            ¦
+    +----------------------------------------------------------------------+
+
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last login: Sat May 21 21:00:21 2022 from 192.168.70.2
+[ansalaza@vbox-oraclelinux-r8 ~]$ sudo git --version
+[sudo] password for ansalaza:
+sudo: git: command not found
+[ansalaza@vbox-oraclelinux-r8 ~]$ sudo yum install git
+Last metadata expiration check: 0:50:11 ago on Sat 21 May 2022 09:42:03 PM EDT.
+Dependencies resolved.
+====================================================================================================================================================================
+ Package                                   Architecture                    Version                                     Repository                              Size
+====================================================================================================================================================================
+Installing:
+ git                                       x86_64                          2.31.1-2.el8                                ol8_appstream                          161 k
+Installing dependencies:
+ git-core                                  x86_64                          2.31.1-2.el8                                ol8_appstream                          4.7 M
+ git-core-doc                              noarch                          2.31.1-2.el8                                ol8_appstream                          2.6 M
+ perl-Error                                noarch                          1:0.17025-2.el8                             ol8_appstream                           46 k
+ perl-Git                                  noarch                          2.31.1-2.el8                                ol8_appstream                           78 k
+ perl-TermReadKey                          x86_64                          2.37-7.el8                                  ol8_appstream                           40 k
+
+Transaction Summary
+====================================================================================================================================================================
+Install  6 Packages
+
+Total download size: 7.7 M
+Installed size: 38 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/6): git-2.31.1-2.el8.x86_64.rpm                                                                                                  374 kB/s | 161 kB     00:00
+(2/6): perl-Error-0.17025-2.el8.noarch.rpm                                                                                          283 kB/s |  46 kB     00:00
+(3/6): perl-Git-2.31.1-2.el8.noarch.rpm                                                                                             690 kB/s |  78 kB     00:00
+(4/6): perl-TermReadKey-2.37-7.el8.x86_64.rpm                                                                                       559 kB/s |  40 kB     00:00
+(5/6): git-core-doc-2.31.1-2.el8.noarch.rpm                                                                                         3.0 MB/s | 2.6 MB     00:00
+(6/6): git-core-2.31.1-2.el8.x86_64.rpm                                                                                             4.2 MB/s | 4.7 MB     00:01
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                               6.8 MB/s | 7.7 MB     00:01
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                            1/1
+  Installing       : git-core-2.31.1-2.el8.x86_64                                                                                                               1/6
+  Installing       : git-core-doc-2.31.1-2.el8.noarch                                                                                                           2/6
+  Installing       : perl-TermReadKey-2.37-7.el8.x86_64                                                                                                         3/6
+  Installing       : perl-Error-1:0.17025-2.el8.noarch                                                                                                          4/6
+  Installing       : perl-Git-2.31.1-2.el8.noarch                                                                                                               5/6
+  Installing       : git-2.31.1-2.el8.x86_64                                                                                                                    6/6
+  Running scriptlet: git-2.31.1-2.el8.x86_64                                                                                                                    6/6
+  Verifying        : git-2.31.1-2.el8.x86_64                                                                                                                    1/6
+  Verifying        : git-core-2.31.1-2.el8.x86_64                                                                                                               2/6
+  Verifying        : git-core-doc-2.31.1-2.el8.noarch                                                                                                           3/6
+  Verifying        : perl-Error-1:0.17025-2.el8.noarch                                                                                                          4/6
+  Verifying        : perl-Git-2.31.1-2.el8.noarch                                                                                                               5/6
+  Verifying        : perl-TermReadKey-2.37-7.el8.x86_64                                                                                                         6/6
+
+Installed:
+  git-2.31.1-2.el8.x86_64            git-core-2.31.1-2.el8.x86_64 git-core-doc-2.31.1-2.el8.noarch perl-Error-1:0.17025-2.el8.noarch perl-Git-2.31.1-2.el8.noarch
+  perl-TermReadKey-2.37-7.el8.x86_64
+
+Complete!
+[ansalaza@vbox-oraclelinux-r8 ~]$ sudo git --version
+git version 2.31.1
+[ansalaza@vbox-oraclelinux-r8 ~]$

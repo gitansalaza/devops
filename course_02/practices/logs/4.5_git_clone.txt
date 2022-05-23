@@ -1,0 +1,42 @@
+ansalaza@vbox-ubuntu-desktop-20:~$ git --version
+git version 2.25.1
+ansalaza@vbox-ubuntu-desktop-20:~$ git config --list
+user.name=Antonio Salazar
+user.email=antonio.salazar@ymail.com
+color.ui=true
+core.editor=vi
+ansalaza@vbox-ubuntu-desktop-20:~$ git clone https://github.com/gitansalaza/sample-repo.git
+Cloning into 'sample-repo'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), 1.93 KiB | 493.00 KiB/s, done.
+ansalaza@vbox-ubuntu-desktop-20:~$ ls -l
+total 40
+drwxr-xr-x 2 ansalaza ansalaza 4096 abr  9 14:17 Desktop
+drwxr-xr-x 2 ansalaza ansalaza 4096 abr  9 14:17 Documents
+drwxr-xr-x 2 ansalaza ansalaza 4096 abr  9 14:17 Downloads
+drwxr-xr-x 2 ansalaza ansalaza 4096 abr  9 14:17 Music
+drwxr-xr-x 2 ansalaza ansalaza 4096 abr  9 14:17 Pictures
+drwxrwxr-x 3 ansalaza ansalaza 4096 may 15 22:21 projects
+drwxr-xr-x 2 ansalaza ansalaza 4096 abr  9 14:17 Public
+drwxrwxr-x 3 ansalaza ansalaza 4096 may 22 22:49 sample-repo
+drwxr-xr-x 2 ansalaza ansalaza 4096 abr  9 14:17 Templates
+drwxr-xr-x 2 ansalaza ansalaza 4096 abr  9 14:17 Videos
+ansalaza@vbox-ubuntu-desktop-20:~$ cd sample-repo
+ansalaza@vbox-ubuntu-desktop-20:~/sample-repo$ ls -l
+total 8
+-rw-rw-r-- 1 ansalaza ansalaza 61 may 22 22:49 README.md
+-rw-rw-r-- 1 ansalaza ansalaza 27 may 22 22:49 SampleFile.txt
+ansalaza@vbox-ubuntu-desktop-20:~/sample-repo$ cat README.md
+# sample-repo
+This is a sample repository
+
+Adding a new line
+ansalaza@vbox-ubuntu-desktop-20:~/sample-repo$ cat SampleFile.txt
+This is a new sample file.
+ansalaza@vbox-ubuntu-desktop-20:~/sample-repo$ git remote -v
+origin	https://github.com/gitansalaza/sample-repo.git (fetch)
+origin	https://github.com/gitansalaza/sample-repo.git (push)
+ansalaza@vbox-ubuntu-desktop-20:~/sample-repo$ 

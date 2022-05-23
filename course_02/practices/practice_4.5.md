@@ -111,3 +111,5 @@ https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&s
 
 <br/>
 
+# Video
+- [Create a new GitHub repository and clone it on a Linux Ubuntu host](https://youtu.be/UBo9tvKGbok)

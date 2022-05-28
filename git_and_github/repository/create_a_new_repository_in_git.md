@@ -1,4 +1,4 @@
-# How to create a new local repository in Git
+# How to create a new repository in Git
 
 ## 1. Create the repository
 - Open a new terminal in your local machine.

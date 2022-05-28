@@ -1,4 +1,4 @@
-# Project 4.7: Create a Pull Request in Git
+# Practice 4.7: Create a Pull Request in Git
 
 Caltech | _Center for Technology & Management Education_ | Simpl¡Learn <br/>
 Post Graduate Program in DevOps <br/>

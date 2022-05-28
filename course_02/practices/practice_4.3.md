@@ -1,4 +1,4 @@
-# Project 4.3: Install Git on Linux
+# Practice 4.3: Install Git on Linux
 
 Caltech | _Center for Technology & Management Education_ | Simpl¡Learn <br/>
 Post Graduate Program in DevOps <br/>

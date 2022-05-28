@@ -1,4 +1,4 @@
-# Project 4.5: Create and Clone a GitHub Repository
+# Practice 4.5: Create and Clone a GitHub Repository
 
 Caltech | _Center for Technology & Management Education_ | Simpl¡Learn <br/>
 Post Graduate Program in DevOps <br/>

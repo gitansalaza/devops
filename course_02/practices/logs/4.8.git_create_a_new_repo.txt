@@ -1,0 +1,51 @@
+nsalaza@vbox-ubuntu-desktop-20:~$ mkdir new_notebook
+ansalaza@vbox-ubuntu-desktop-20:~$ cd new_notebook
+ansalaza@vbox-ubuntu-desktop-20:~/new_notebook$ git init
+Initialized empty Git repository in /home/ansalaza/new_notebook/.git/
+ansalaza@vbox-ubuntu-desktop-20:~/new_notebook$ git config --global user.name "Antonio Salazar"
+ansalaza@vbox-ubuntu-desktop-20:~/new_notebook$ git config --global user.email "antonio.salazar@ymail.com"
+ansalaza@vbox-ubuntu-desktop-20:~/new_notebook$ git config --global core.editor vi
+ansalaza@vbox-ubuntu-desktop-20:~/new_notebook$ git config --global color.ui true
+ansalaza@vbox-ubuntu-desktop-20:~/new_notebook$ git config --list
+user.name=Antonio Salazar
+user.email=antonio.salazar@ymail.com
+color.ui=true
+core.editor=vi
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+ansalaza@vbox-ubuntu-desktop-20:~/new_notebook$ tee README.md <<EOF
+> This is my new Git notebook repository.
+> EOF
+This is my new Git notebook repository.
+ansalaza@vbox-ubuntu-desktop-20:~/new_notebook$ git add README.md
+ansalaza@vbox-ubuntu-desktop-20:~/new_notebook$ git commit -m "Initial commit"
+[master (root-commit) 570e8d9] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+ansalaza@vbox-ubuntu-desktop-20:~/new_notebook$ git branch -M main
+ansalaza@vbox-ubuntu-desktop-20:~/new_notebook$ git log
+commit 570e8d9e3b3b2517f3a07b87324471100236e898 (HEAD -> main)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sat May 28 17:31:17 2022 -0500
+
+    Initial commit
+ansalaza@vbox-ubuntu-desktop-20:~/new_notebook$ git remote add origin https://github.com/gitansalaza/new_repo_example.git
+ansalaza@vbox-ubuntu-desktop-20:~/new_notebook$ git push -u origin main
+Username for 'https://github.com': gitansalaza
+Password for 'https://gitansalaza@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 256 bytes | 32.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/gitansalaza/new_repo_example.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+ansalaza@vbox-ubuntu-desktop-20:~/new_notebook$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+ansalaza@vbox-ubuntu-desktop-20:~/new_notebook$ 
+

@@ -27,8 +27,33 @@ Steps to be followed:
 - Please refer to the [How to create a new repository in GitHub](https://github.com/gitansalaza/devops/blob/main/git_and_github/repository/create_a_new_repository_in_github.md) document.
 
 ## 2. Create a repository on the local machine.
-- Please refer to the [How to create a new local repository in Git](https://github.com/gitansalaza/devops/tree/main/git_and_github/local_repository) document.
+- Please refer to the [How to create a new repository in Git](https://github.com/gitansalaza/devops/blob/main/git_and_github/repository/create_a_new_repository_in_git.md) document.
 
 ## 3. Push the changes from the local repository to GitHub.
 
+  - Go to the Github new reposiory main page and copy the HTTPS URL.
+
+    ![1](images/4.8.git_create_a_new_repo_03.jpg)
+
+  - Back to the local host in the terminal add the remote repository.
+
+    >```
+    > git remote add origin <HTTPS GitHub repo URL>
+    >```
+
+  - Issue a push command to upload changes from the local repository to the remote one.
+
+    >```
+    > git push -u origin main
+    >```
+
+    ![2](images/4.8.git_create_a_new_repo_04b.jpg)
+
+
 ## 4. Check the status of the local and remote repository.
+
+  - Go back to the GitHub repository main page and verify whether the changes were uploaded as expected.
+
+    ![3](images/4.8.git_create_a_new_repo_05.jpg)
+
+ 

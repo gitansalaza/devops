@@ -33,7 +33,7 @@ Steps to be followed:
 
   - Go to the Github new reposiory main page and copy the HTTPS URL.
 
-    ![1](images/4.8.git_create_a_new_repo_03.jpg)
+    ![1](images/4.8.git_create_a_new_repo_01.jpg)
 
   - Back to the local host in the terminal add the remote repository.
 
@@ -47,13 +47,13 @@ Steps to be followed:
     > git push -u origin main
     >```
 
-    ![2](images/4.8.git_create_a_new_repo_04b.jpg)
+    ![2](images/4.8.git_create_a_new_repo_02.jpg)
 
 
 ## 4. Check the status of the local and remote repository.
 
   - Go back to the GitHub repository main page and verify whether the changes were uploaded as expected.
 
-    ![3](images/4.8.git_create_a_new_repo_05.jpg)
+    ![3](images/4.8.git_create_a_new_repo_03.jpg)
 
  

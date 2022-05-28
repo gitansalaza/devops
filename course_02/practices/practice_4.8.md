@@ -24,10 +24,11 @@ Steps to be followed:
 
 # Solution
 ## 1. Create a GitHub repository.
-- Please refer to the [How to create a new repository in GitHub](https://github.com/gitansalaza/devops/tree/main/git_and_github/repository) document.
+- Please refer to the [How to create a new repository in GitHub](https://github.com/gitansalaza/devops/blob/main/git_and_github/repository/create_a_new_repository_in_github.md) document.
 
 ## 2. Create a repository on the local machine.
 - Please refer to the [How to create a new local repository in Git](https://github.com/gitansalaza/devops/tree/main/git_and_github/local_repository) document.
 
 ## 3. Push the changes from the local repository to GitHub.
+
 ## 4. Check the status of the local and remote repository.

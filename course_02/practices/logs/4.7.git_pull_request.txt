@@ -1,0 +1,67 @@
+ansalaza@vbox-ubuntu-desktop-20:~$ --version
+--version: command not found
+ansalaza@vbox-ubuntu-desktop-20:~$ git --version
+git version 2.25.1
+ansalaza@vbox-ubuntu-desktop-20:~$ ls -l
+total 48
+drwxr-xr-x 2 ansalaza ansalaza 4096 abr  9 14:17 Desktop
+drwxr-xr-x 2 ansalaza ansalaza 4096 abr  9 14:17 Documents
+drwxr-xr-x 2 ansalaza ansalaza 4096 abr  9 14:17 Downloads
+drwxr-xr-x 2 ansalaza ansalaza 4096 abr  9 14:17 Music
+drwxr-xr-x 2 ansalaza ansalaza 4096 abr  9 14:17 Pictures
+drwxrwxr-x 3 ansalaza ansalaza 4096 may 15 22:21 projects
+drwxr-xr-x 2 ansalaza ansalaza 4096 abr  9 14:17 Public
+drwxrwxr-x 3 ansalaza ansalaza 4096 may 22 22:49 sample-repo
+drwx------ 3 ansalaza ansalaza 4096 may 24 23:00 snap
+drwxrwxr-x 3 ansalaza ansalaza 4096 may 24 23:08 source-repository
+drwxr-xr-x 2 ansalaza ansalaza 4096 abr  9 14:17 Templates
+drwxr-xr-x 2 ansalaza ansalaza 4096 abr  9 14:17 Videos
+ansalaza@vbox-ubuntu-desktop-20:~$ cd source-repository/
+ansalaza@vbox-ubuntu-desktop-20:~/source-repository$ ls -l
+total 4
+-rw-rw-r-- 1 ansalaza ansalaza 38 may 24 23:08 README.md
+ansalaza@vbox-ubuntu-desktop-20:~/source-repository$ git remote -v
+origin	https://github.com/gitansalaza/source-repository.git (fetch)
+origin	https://github.com/gitansalaza/source-repository.git (push)
+upstream	https://github.com/gitansalaza/source-repository.git (fetch)
+upstream	https://github.com/gitansalaza/source-repository.git (push)
+ansalaza@vbox-ubuntu-desktop-20:~/source-repository$ ls 
+README.md
+ansalaza@vbox-ubuntu-desktop-20:~/source-repository$ vi README.md 
+ansalaza@vbox-ubuntu-desktop-20:~/source-repository$ cat README.md 
+# source-repository
+Source Repository
+
+This is used to understand how the pull request work in Git.
+ansalaza@vbox-ubuntu-desktop-20:~/source-repository$ git add .
+ansalaza@vbox-ubuntu-desktop-20:~/source-repository$ git commit -m "Proposing a new change"
+[main edbeb8e] Proposing a new change
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+ansalaza@vbox-ubuntu-desktop-20:~/source-repository$ git push origin
+Username for 'https://github.com': gitansalaza
+Password for 'https://gitansalaza@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 336 bytes | 336.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/gitansalaza/source-repository.git
+   006cae7..edbeb8e  main -> main
+ansalaza@vbox-ubuntu-desktop-20:~/source-repository$ vi README.md 
+ansalaza@vbox-ubuntu-desktop-20:~/source-repository$ git add .
+ansalaza@vbox-ubuntu-desktop-20:~/source-repository$ git commit -m "Make a slight correction"
+[main c7e01f5] Make a slight correction
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ansalaza@vbox-ubuntu-desktop-20:~/source-repository$ git push origin
+Username for 'https://github.com': gitansalaza
+Password for 'https://gitansalaza@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 292 bytes | 292.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/gitansalaza/source-repository.git
+   edbeb8e..c7e01f5  main -> main
+ansalaza@vbox-ubuntu-desktop-20:~/source-repository$ 
+

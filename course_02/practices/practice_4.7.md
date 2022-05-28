@@ -133,3 +133,5 @@ Steps to be followed:
     ![15](images/4.7_create_a_pull_request_15.jpg)
 
 
+# Log file
+[4.7.git_pull_request.txt](logs/4.7.git_pull_request.txt) 

@@ -112,11 +112,11 @@ https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&s
 <br/>
 
 # Logs
-- [Git clone log file](logs/4.5_git_clone.txt)
+[4.5.git_clone.txt](logs/4.5.git_clone.txt)
 
 <br/>
 
 # Video
-- [Create a new GitHub repository and clone it on a Linux Ubuntu host](https://youtu.be/UBo9tvKGbok)
+[Create a new GitHub repository and clone it on a Linux Ubuntu host](https://youtu.be/UBo9tvKGbok)
 
 <br/>

@@ -56,4 +56,6 @@ Steps to be followed:
 
     ![3](images/4.8.git_create_a_new_repo_03.jpg)
 
- 
+
+# Log file
+[4.8.git_create_a_new_repo.txt](logs/4.8.git_create_a_new_repo.txt) 

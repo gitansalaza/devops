@@ -5,13 +5,13 @@
 - Create a new directory.
 
     >```
-    > mkdir new_notebook
+    > mkdir new_repo_example
     >```
 
 - Change to the new directory.
 
     >```
-    > cd new_notebook
+    > cd new_repo_example
     >```
 
 - Initialize the git repository.

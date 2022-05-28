@@ -63,28 +63,73 @@ Steps to be followed:
 
     ![6](images/4.7_create_a_pull_request_06.jpg)
 
--    
+    From now onwards, you will need to create a **Personal access token** in order to work with your remote repository.
 
-![7](images/4.7_create_a_pull_request_07.jpg)
+    Refer to the [How to create a new token in GitHub](https://github.com/gitansalaza/devops/tree/main/token) steps.
 
-![8](images/4.7_create_a_pull_request_08.jpg)
+<br/>
 
-![9](images/4.7_create_a_pull_request_09.jpg)
+## 3. Sync fork with the original repository.
+- On your local host go to **source-repository**, set up the remote repository just cloned in the previous step.
 
-![10](images/4.7_create_a_pull_request_10.jpg)
+    >```
+    > cd source-repository
+    > git remote -v
+    > git remote add upstream <https source repository URL>
+    > git push 
+    > # Enter your personal access token 
+    >```
 
-![11](images/4.7_create_a_pull_request_11.jpg)
+    ![8](images/4.7_create_a_pull_request_08.jpg)
 
-![12](images/4.7_create_a_pull_request_12.jpg)
+<br/>
 
-![13](images/4.7_create_a_pull_request_13.jpg)
+## 4. Push your Changes.    
 
-![14](images/4.7_create_a_pull_request_14.jpg)
+- Go to your local source-repository, edit the README.md file and push it to your destination remote repository just cloned. _In this example the destination repository exists under **gitansalaza** account_
 
-![15](images/4.7_create_a_pull_request_15.jpg)
+    >```
+    > cd source-repository
+    > vi README.md
+    > # Edit the file and make some changes 
+    > # Save the file and exit
+    > git add .
+    > git commit -m "<comment>"
+    > git push origin
+    >```
 
-### Token
->```
-> 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
->```
+    ![9](images/4.7_create_a_pull_request_09.jpg)
+
+<br/>
+
+## 5. Create a Pull Request.
+- In your destination respository click on the **Create pull request** button.
+
+    ![10](images/4.7_create_a_pull_request_10.jpg)
+
+- Comment about what the pull request is about including the changes you are proposing.
+
+- Go to the source repository GitHub account.
+- Click on the **Pull requests** tab.
+    
+    The pull request details should appear in the [source-respository pull requests](https://github.com/asgdevops/source-repository/pulls?q=is%3Apr+is%3Aclosed)
+
+    ![11](images/4.7_create_a_pull_request_11.jpg)
+
+- Select the pull request you are interested in, and click on the **Merge pull request** button to accept the changes proposed by the GitHub account contributor.
+
+    ![12](images/4.7_create_a_pull_request_12.jpg)
+
+- Click on the **Confirm merge** button.
+
+    ![13](images/4.7_create_a_pull_request_13.jpg)
+
+- A confirmation page is diesplayed.
+
+    ![14](images/4.7_create_a_pull_request_14.jpg)
+
+- Verify the changes are reflected by opening your [source-repository](https://github.com/asgdevops/source-repository) main from your source GitHub account.
+  
+    ![15](images/4.7_create_a_pull_request_15.jpg)
+
 

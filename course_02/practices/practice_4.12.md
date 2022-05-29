@@ -5,11 +5,11 @@ Post Graduate Program in DevOps <br/>
 PG DO - Configuration Management with Ansible and Terraform <br/>
 
 - Assigned to: Antonio Salazar Gomez ([antonio.salazar@ymail.com](mailto:antonio.salazar@ymail.com))
-- Updated on:  2022-05-22 
+- Updated on:  2022-05-28
 - Github repo: [gitansalaza/devops/course_02/practices/practice_4.12.md](https://github.com/gitansalaza/devops/blob/main/course_02/practices/practice_4.12.md)
 
 # DESCRIPTION
-o switch between branches in Git
+To switch between branches in Git
 
 **Tools required**: Git
 
@@ -45,7 +45,6 @@ Steps to be followed:
   > git add index.html
   > git commit -a -m "File modified"
   >```
-
 
 ## 4. Check the status of the new branch.
 

@@ -1,0 +1,59 @@
+nsalaza@vbox-ubuntu-desktop-20:~/sample-project$ git branch development
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git branch
+  development
+  feature
+* main
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git checkout development
+Switched to branch 'development'
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ tee README.md <<EOF
+> This is the new README.md file.
+> EOF
+This is the new README.md file.
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git add .
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git commit -a -m "Add README.md to the development branch"
+[development 305f3e5] Add README.md to the development branch
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git merge development
+Updating 6dc713a..305f3e5
+Fast-forward
+ README.md | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git log
+commit 305f3e5a7ccbbdcc2bb5dc18292c74adf6af4348 (HEAD -> main, development)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sat May 28 21:46:11 2022 -0500
+
+    Add README.md to the development branch
+
+commit 6dc713ace4a210bdb02f34718b1667c8bdb4deed (origin/main, origin/HEAD)
+Author: Antonio Salazar <96018591+gitansalaza@users.noreply.github.com>
+Date:   Sat May 28 20:02:12 2022 -0500
+
+    Initial commit
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git push -u origin main
+Username for 'https://github.com': gitansalaza
+Password for 'https://gitansalaza@github.com': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/gitansalaza/sample-project.git
+   6dc713a..305f3e5  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git log
+commit 305f3e5a7ccbbdcc2bb5dc18292c74adf6af4348 (HEAD -> main, origin/main, origin/HEAD, development)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sat May 28 21:46:11 2022 -0500
+
+    Add README.md to the development branch
+
+commit 6dc713ace4a210bdb02f34718b1667c8bdb4deed
+Author: Antonio Salazar <96018591+gitansalaza@users.noreply.github.com>
+Date:   Sat May 28 20:02:12 2022 -0500
+
+    Initial commit
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ 
+

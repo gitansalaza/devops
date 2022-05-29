@@ -28,14 +28,69 @@ Tools required: Git
 
 # Solution
 ## 1. Create a new repository.
+
+  - Click on the Create new button to create a new repository.
+
+  ![1](images/4.9.create_a_git_branch_01.jpg) 
+
+
 ## 2. Clone the GitHub repository.
+
+  - Copy the HTTPS URL from the GitHub Repository.
+
+  ![2](images/4.9.create_a_git_branch_02.jpg) 
+
+  - Open a new terminal on your local host and issue:
+  >```
+  > git clone <HTTPS Repo URL> # Paste here
+  >```
+
 ## 3. List all the branches in your repository.
+
+  >```
+  > git branch
+  >```
+
+
 ## 4. Create a new branch.
+
+  >```
+  > git branch integration
+  >```
+
+
 ## 5. Verify the creation of the new branch.
+
+  >```
+  > git branch
+  >```
+
+
 ## 6. Rename an existing branch.
+
+  >```
+  > git branch -m development
+  > git branch
+  > git branch -m main
+  > git branch
+  >```
+
+
 ## 7. Delete the branch.
+
+  >```
+  > git branch -d integration
+  >```
+
 ## 8. Verify the deletion of the branch.
+
+  >```
+  > git branch
+  >```
+
+## Image example
+  ![3](images/4.9.create_a_git_branch_03.jpg) 
 
 
 # Log file
-[](logs/) 
+[4.9.git_create_new_branch.txt](logs/4.9.git_create_new_branch.txt) 

@@ -1,0 +1,26 @@
+ansalaza@vbox-ubuntu-desktop-20:~$ git clone https://github.com/gitansalaza/sample-project.git
+Cloning into 'sample-project'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 623 bytes | 311.00 KiB/s, done.
+ansalaza@vbox-ubuntu-desktop-20:~$ cd sample-project/
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git branch
+* main
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git branch integration
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git branch
+  integration
+* main
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git branch -m development
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git branch
+* development
+  integration
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git branch -m main
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git branch
+  integration
+* main
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git branch -d integration
+Deleted branch integration (was 6dc713a).
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git branch
+* main
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ 

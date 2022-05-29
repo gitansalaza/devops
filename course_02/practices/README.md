@@ -5,3 +5,4 @@
 - [Practice 4.7: Create a Pull Request in Git](https://github.com/gitansalaza/devops/blob/main/course_02/practices/practice_4.7.md)
 - [Practice 4.8: Push file to GitHub Repository](https://github.com/gitansalaza/devops/blob/main/course_02/practices/practice_4.8.md)
 - [Practice 4.10: Create a Branch in Git](https://github.com/gitansalaza/devops/blob/main/course_02/practices/practice_4.10.md)
+- [Practice 4.12: Switching Branches in Git](https://github.com/gitansalaza/devops/blob/main/course_02/practices/practice_4.12.md)

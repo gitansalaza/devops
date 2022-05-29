@@ -1,1 +1,6 @@
 videos/
+documents/
+backup/
+*.zip
+*.pdf
+*.html

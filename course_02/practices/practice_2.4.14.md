@@ -1,4 +1,4 @@
-# Practice 4.14: Merging Branches in Git
+# Practice 2.4.14: Merging Branches in Git
 
 Caltech | _Center for Technology & Management Education_ | Simpl¡Learn <br/>
 Post Graduate Program in DevOps <br/>
@@ -6,7 +6,7 @@ PG DO - Configuration Management with Ansible and Terraform <br/>
 
 - Assigned to: Antonio Salazar Gomez ([antonio.salazar@ymail.com](mailto:antonio.salazar@ymail.com))
 - Updated on:  2022-05-28 
-- Github repo: [gitansalaza/devops/course_02/practices/practice_4.14.md](https://github.com/gitansalaza/devops/blob/main/course_02/practices/practice_4.14.md)
+- Github repo: [gitansalaza/devops/course_02/practices/practice_2.4.14.md](https://github.com/gitansalaza/devops/blob/main/course_02/practices/practice_2.4.14.md)
 
 # DESCRIPTION
 To merge branches in Git
@@ -65,10 +65,10 @@ Steps to be followed:
   >```
 
 ## Image example
-  ![1](images/4.14.git_merge_01.jpg)
+  ![1](images/2.4.14.git_merge_01.jpg)
 
-  ![2](images/4.14.git_merge_02.jpg)
+  ![2](images/2.4.14.git_merge_02.jpg)
 
 
 # Log file
-[4.14.git_merge.txt](logs/4.14.git_merge.txt) 
+[2.4.14.git_merge.txt](logs/2.4.14.git_merge.txt) 

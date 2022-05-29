@@ -1,4 +1,4 @@
-# Practice 4.10: Create a Branch in Git
+# Practice 2.4.10: Create a Branch in Git
 
 Caltech | _Center for Technology & Management Education_ | Simpl¡Learn <br/>
 Post Graduate Program in DevOps <br/>
@@ -6,7 +6,7 @@ PG DO - Configuration Management with Ansible and Terraform <br/>
 
 - Assigned to: Antonio Salazar Gomez ([antonio.salazar@ymail.com](mailto:antonio.salazar@ymail.com))
 - Updated on:  2022-05-22 
-- Github repo: [gitansalaza/devops/course_02/practices/practice_4.10.md](https://github.com/gitansalaza/devops/blob/main/course_02/practices/practice_4.10.md)
+- Github repo: [gitansalaza/devops/course_02/practices/practice_2.4.10.md](https://github.com/gitansalaza/devops/blob/main/course_02/practices/practice_2.4.10.md)
 
 # DESCRIPTION
 To create branches in Git
@@ -31,14 +31,14 @@ Tools required: Git
 
   - Click on the Create new button to create a new repository.
 
-  ![1](images/4.10.create_a_git_branch_01.jpg) 
+  ![1](images/2.4.10.create_a_git_branch_01.jpg) 
 
 
 ## 2. Clone the GitHub repository.
 
   - Copy the HTTPS URL from the GitHub Repository.
 
-  ![2](images/4.10.create_a_git_branch_02.jpg) 
+  ![2](images/2.4.10.create_a_git_branch_02.jpg) 
 
   - Open a new terminal on your local host and issue:
   >```
@@ -89,8 +89,8 @@ Tools required: Git
   >```
 
 ## Image example
-  ![3](images/4.10.create_a_git_branch_03.jpg) 
+  ![3](images/2.4.10.create_a_git_branch_03.jpg) 
 
 
 # Log file
-[4.10.git_create_new_branch.txt](logs/4.10.git_create_new_branch.txt) 
+[2.4.10.git_create_new_branch.txt](logs/2.4.10.git_create_new_branch.txt) 

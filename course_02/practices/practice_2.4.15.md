@@ -1,4 +1,4 @@
-# Practice 4.15: Create a new branch and merge the branch in Git
+# Practice 2.4.15: Create a new branch and merge the branch in Git
 
 Caltech | _Center for Technology & Management Education_ | Simpl¡Learn <br/>
 Post Graduate Program in DevOps <br/>
@@ -6,7 +6,7 @@ PG DO - Configuration Management with Ansible and Terraform <br/>
 
 - Assigned to: Antonio Salazar Gomez ([antonio.salazar@ymail.com](mailto:antonio.salazar@ymail.com))
 - Updated on:  2022-05-28 
-- Github repo: [gitansalaza/devops/course_02/practices/practice_4.15.md](https://github.com/gitansalaza/devops/blob/main/course_02/practices/practice_4.15.md)
+- Github repo: [gitansalaza/devops/course_02/practices/practice_2.4.15.md](https://github.com/gitansalaza/devops/blob/main/course_02/practices/practice_2.4.15.md)
 
 # DESCRIPTION
 
@@ -27,11 +27,11 @@ To create a new branch and merge it in Git
 
   - Click on the **New** button.
 
-  ![1](images/4.15.git_create_new_branch_nd_merge_01.jpg)
+  ![1](images/2.4.15.git_create_new_branch_nd_merge_01.jpg)
 
   - Fill in the **Create a new repository** form.
 
-  ![2](images/4.15.git_create_new_branch_nd_merge_02.jpg)
+  ![2](images/2.4.15.git_create_new_branch_nd_merge_02.jpg)
 
 ## 2. Clone the repository on the local machine.
 
@@ -40,7 +40,7 @@ To create a new branch and merge it in Git
   > cd it-company
   >```
 
-  ![5](images/4.15.git_create_new_branch_nd_merge_05.jpg)
+  ![5](images/2.4.15.git_create_new_branch_nd_merge_05.jpg)
 
 ## 3. Create a new branch.
 
@@ -50,7 +50,7 @@ To create a new branch and merge it in Git
   > git branch
   >```
 
-  ![6](images/4.15.git_create_new_branch_nd_merge_06.jpg)
+  ![6](images/2.4.15.git_create_new_branch_nd_merge_06.jpg)
 
 ## 4. Make changes on the new branch.
 
@@ -61,9 +61,9 @@ To create a new branch and merge it in Git
 
   - Append the script code file.
   >```
-  > tee 4.15.module.py << EOF
+  > tee 2.4.15.module.py << EOF
   > """
-  > Script for practice 4.15: Create a new branch and merge the branch in Git
+  > Script for practice 2.4.15: Create a new branch and merge the branch in Git
   > """
   > data= {'company': 'IT company','project':'3M', 'module':['m1','m2','m3']}
   > 
@@ -73,11 +73,11 @@ To create a new branch and merge it in Git
   > EOF
   >```
 
-  ![7](images/4.15.git_create_new_branch_nd_merge_07.jpg)
+  ![7](images/2.4.15.git_create_new_branch_nd_merge_07.jpg)
 
   - Test the script code.
   >```
-  > python3 4.15.module.py
+  > python3 2.4.15.module.py
   >```
 
   - Track the last changes and commit.
@@ -86,7 +86,7 @@ To create a new branch and merge it in Git
   > git commit -m "Append script code for module 1"
   >```
 
-  ![8](images/4.15.git_create_new_branch_nd_merge_08.jpg)
+  ![8](images/2.4.15.git_create_new_branch_nd_merge_08.jpg)
 
 ## 5. Switch to the main branch and perform merge the new branch.
 
@@ -97,7 +97,7 @@ To create a new branch and merge it in Git
   > git log
   >```
 
-  ![9](images/4.15.git_create_new_branch_nd_merge_09.jpg)
+  ![9](images/2.4.15.git_create_new_branch_nd_merge_09.jpg)
 
 ## 6. Push the main branch to the remote repository.
 
@@ -106,18 +106,18 @@ To create a new branch and merge it in Git
   > git log
   >```
 
-  ![10](images/4.15.git_create_new_branch_nd_merge_10.jpg)
+  ![10](images/2.4.15.git_create_new_branch_nd_merge_10.jpg)
 
 ## 7. Veify the changes on the GitHub repository.
 
   - Check the overall repository main page.
 
-  ![11](images/4.15.git_create_new_branch_nd_merge_11.jpg)
+  ![11](images/2.4.15.git_create_new_branch_nd_merge_11.jpg)
 
   - Review the code changes.
 
-  ![12](images/4.15.git_create_new_branch_nd_merge_12.jpg)
+  ![12](images/2.4.15.git_create_new_branch_nd_merge_12.jpg)
 
 
 # Log file
-[4.15.git_create_branch_and_merge.txt](logs/4.15.git_create_branch_and_merge.txt) 
+[2.4.15.git_create_branch_and_merge.txt](logs/2.4.15.git_create_branch_and_merge.txt) 

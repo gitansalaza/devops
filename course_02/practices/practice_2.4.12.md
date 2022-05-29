@@ -1,4 +1,4 @@
-# Practice 4.12: Switching Branches in Git
+# Practice 2.4.12: Switching Branches in Git
 
 Caltech | _Center for Technology & Management Education_ | Simpl¡Learn <br/>
 Post Graduate Program in DevOps <br/>
@@ -6,7 +6,7 @@ PG DO - Configuration Management with Ansible and Terraform <br/>
 
 - Assigned to: Antonio Salazar Gomez ([antonio.salazar@ymail.com](mailto:antonio.salazar@ymail.com))
 - Updated on:  2022-05-28
-- Github repo: [gitansalaza/devops/course_02/practices/practice_4.12.md](https://github.com/gitansalaza/devops/blob/main/course_02/practices/practice_4.12.md)
+- Github repo: [gitansalaza/devops/course_02/practices/practice_2.4.12.md](https://github.com/gitansalaza/devops/blob/main/course_02/practices/practice_2.4.12.md)
 
 # DESCRIPTION
 To switch between branches in Git
@@ -60,8 +60,8 @@ Steps to be followed:
   >```
 
 ## Image example
-  ![1](images/4.12.switch_between_branches.jpg) 
+  ![1](images/2.4.12.switch_between_branches.jpg) 
 
 
 # Log file
-[4.12.git_switch_between_branches.txt](logs/4.12.git_switch_between_branches.txt) 
+[2.4.12.git_switch_between_branches.txt](logs/2.4.12.git_switch_between_branches.txt) 

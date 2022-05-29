@@ -6,7 +6,7 @@ PG DO - Configuration Management with Ansible and Terraform <br/>
 
 - Assigned to: Antonio Salazar Gomez ([antonio.salazar@ymail.com](mailto:antonio.salazar@ymail.com))
 - Updated on:  2022-05-21 
-- Github repo: [gitansalaza/devops/course_02/practices/practice_4.3.md](https://github.com/gitansalaza/devops/blob/main/course_02/practices/practice_4.3.md)
+- Github repo: [gitansalaza/devops/course_02/practices/practice_2.4.3.md](https://github.com/gitansalaza/devops/blob/main/course_02/practices/practice_2.4.3.md)
 
 # DESCRIPTION
 To install Git on Linux platform and verify the installation.
@@ -53,23 +53,23 @@ Steps to be followed:
 # Images
 
 - ### Git installation on Debian11
-![Debian11](images/4.3_git_install_on_debian11.jpg)
+![Debian11](images/2.4.3_git_install_on_debian11.jpg)
 
 - ### Git installation on Ubuntu20.04
-![Ubuntu20](images/4.3_git_install_on_ubuntu20..jpg)
+![Ubuntu20](images/2.4.3_git_install_on_ubuntu20..jpg)
 
 - ### Git installation on Oracle Linux 8
-![OL8_1](images/4.3_git_install_on_OracleLinux8_01.jpg)
-![OL8_2](images/4.3_git_install_on_OracleLinux8_02.jpg)
+![OL8_1](images/2.4.3_git_install_on_OracleLinux8_01.jpg)
+![OL8_2](images/2.4.3_git_install_on_OracleLinux8_02.jpg)
 
 - ### Git installation on openSUSE 15.3
-![openSUSE_1](images/4.3_git_install_on_openSUSE_01.jpg)
-![openSUSE_2](images/4.3_git_install_on_openSUSE_02.jpg)
+![openSUSE_1](images/2.4.3_git_install_on_openSUSE_01.jpg)
+![openSUSE_2](images/2.4.3_git_install_on_openSUSE_02.jpg)
 
 - ### Git installation on Fedora 35
-![Fedora_0](images/4.3_git_install_on_Fedora35_00.jpg)
-![Fedora_1](images/4.3_git_install_on_Fedora35_01.jpg)
-![Fedora_2](images/4.3_git_install_on_Fedora35_02.jpg)
+![Fedora_0](images/2.4.3_git_install_on_Fedora35_00.jpg)
+![Fedora_1](images/2.4.3_git_install_on_Fedora35_01.jpg)
+![Fedora_2](images/2.4.3_git_install_on_Fedora35_02.jpg)
 
 <br/>
 

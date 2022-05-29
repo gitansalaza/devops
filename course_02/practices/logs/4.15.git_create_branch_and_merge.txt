@@ -1,0 +1,88 @@
+nsalaza@vbox-ubuntu-desktop-20:~$ git clone https://github.com/gitansalaza/it-company.git
+Cloning into 'it-company'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 629 bytes | 629.00 KiB/s, done.
+ansalaza@vbox-ubuntu-desktop-20:~$ cd it-company
+ansalaza@vbox-ubuntu-desktop-20:~/it-company$ git branch development
+ansalaza@vbox-ubuntu-desktop-20:~/it-company$ git checkout development
+Switched to branch 'development'
+ansalaza@vbox-ubuntu-desktop-20:~/it-company$ git branch
+* development
+  main
+ansalaza@vbox-ubuntu-desktop-20:~/it-company$ echo "Adding script code for module 1." >> README.md ;
+ansalaza@vbox-ubuntu-desktop-20:~/it-company$ tee 4.15.module.py << EOF
+> """
+> Script for practice 4.15: Create a new branch and merge the branch in Git
+> """
+> data= {'company': 'IT company','project':'3M', 'module':['m1','m2','m3']}
+> 
+> print (f"Welcome to {data['company']}")
+> print (f"You are working on project {data['project']}")
+> print (f"You are assigned to work on module {data['module'][0]}")
+> EOF
+"""
+Script for practice 4.15: Create a new branch and merge the branch in Git
+"""
+data= {'company': 'IT company','project':'3M', 'module':['m1','m2','m3']}
+
+print (f"Welcome to {data['company']}")
+print (f"You are working on project {data['project']}")
+print (f"You are assigned to work on module {data['module'][0]}")
+ansalaza@vbox-ubuntu-desktop-20:~/it-company$ python3 4.15.module.py
+Welcome to IT company
+You are working on project 3M
+You are assigned to work on module m1
+ansalaza@vbox-ubuntu-desktop-20:~/it-company$ git add .
+ansalaza@vbox-ubuntu-desktop-20:~/it-company$ git commit -m "Append script code for module 1"
+[development 36e0897] Append script code for module 1
+ 2 files changed, 9 insertions(+)
+ create mode 100644 4.15.module.py
+ansalaza@vbox-ubuntu-desktop-20:~/it-company$ git log
+commit 36e089755121620664f31610d122772b22c15456 (HEAD -> development)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sat May 28 22:31:50 2022 -0500
+
+    Append script code for module 1
+
+commit 8766b5b861d349bff9a79152f743d75b038167d1 (origin/main, origin/HEAD, main)
+Author: Antonio Salazar <96018591+gitansalaza@users.noreply.github.com>
+Date:   Sat May 28 22:15:04 2022 -0500
+
+    Initial commit
+ansalaza@vbox-ubuntu-desktop-20:~/it-company$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+ansalaza@vbox-ubuntu-desktop-20:~/it-company$ git merge development
+Updating 8766b5b..36e0897
+Fast-forward
+ 4.15.module.py | 8 ++++++++
+ README.md      | 1 +
+ 2 files changed, 9 insertions(+)
+ create mode 100644 4.15.module.py
+ansalaza@vbox-ubuntu-desktop-20:~/it-company$ git log
+commit 36e089755121620664f31610d122772b22c15456 (HEAD -> main, development)
+Author: Antonio Salazar <antonio.salazar@ymail.com>
+Date:   Sat May 28 22:31:50 2022 -0500
+
+    Append script code for module 1
+
+commit 8766b5b861d349bff9a79152f743d75b038167d1 (origin/main, origin/HEAD)
+Author: Antonio Salazar <96018591+gitansalaza@users.noreply.github.com>
+Date:   Sat May 28 22:15:04 2022 -0500
+
+    Initial commit
+ansalaza@vbox-ubuntu-desktop-20:~/it-company$ git push -u origin main
+Username for 'https://github.com': gitansalaza
+Password for 'https://gitansalaza@github.com': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 583 bytes | 583.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/gitansalaza/it-company.git
+   8766b5b..36e0897  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+ansalaza@vbox-ubuntu-desktop-20:~/it-company$ 
+

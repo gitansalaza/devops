@@ -1,0 +1,27 @@
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git branch feature
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git checkout feature
+Switched to branch 'feature'
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ tee index.html << EOF
+> <html><body><p> This is a test HTML file. </p></body></html>
+> EOF
+<html><body><p> This is a test HTML file. </p></body></html>
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git add index.html
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git commit -a -m "File modified"
+[feature 8ee9fe2] File modified
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.html
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git status
+On branch feature
+nothing to commit, working tree clean
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git branch
+* feature
+  main
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+ansalaza@vbox-ubuntu-desktop-20:~/sample-project$ 

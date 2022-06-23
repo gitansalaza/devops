@@ -188,7 +188,7 @@ _Notice you have to confirm with **Yes** to apply the plan_
 -  Create AWS EC2 Instance script [awsec.tf](scripts/awsec.tf)
 
 # Logs
-- Setup Terraform [pr01_tf_setup.log](logs/pr01_tf_awsec.log)
+- Setup Terraform [pr01_tf_setup.log](logs/pr01_tf_setup.log)
 - Create AWS EC2 Instance [pr01_tf_awsec.log](logs/pr01_tf_awsec.log)
 
 # References

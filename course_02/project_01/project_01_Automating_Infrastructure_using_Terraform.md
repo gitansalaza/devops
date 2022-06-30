@@ -303,6 +303,11 @@ _Confirm **Yes** when prompted_
 - Setup Terraform [pr01_tf_setup.log](logs/pr01_tf_setup.log)
 - Create AWS EC2 Instance [pr01_tf_instance.log](logs/pr01_tf_instance.log)
 
+
+# Video
+- Solution steps video [pr01_tf.webm](videos/pr01_tf.webm)
+
+
 # References
 - [Download Terraform](https://www.terraform.io/downloads)
 - [Terrform Tutorial](https://learn.hashicorp.com/terraform?utm_source=terraform_io)

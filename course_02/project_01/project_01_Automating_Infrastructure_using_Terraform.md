@@ -36,6 +36,17 @@ Considering the Organizational requirement you are asked to automate the infrast
 
 # Solution steps 
 
+- ## Steps Summary
+  - The solution steps below to perform the following tasks:
+  - Install and set up **Terraform** from a Linux terminal.
+  - Build scripts split into two parts:
+    - AWS Login Credentials.
+    - Main AWS Object creation.
+      - Create a Key Pair object.
+      - Create a Security group allowing access to port 22 from any incoming address.
+      - Create a new AWS EC2 Instance.
+  - Destroy the AWS objects just created.
+
 - ## Set up terraform
 
 1. Download and add Terraform GPG key.
@@ -89,9 +100,10 @@ Considering the Organizational requirement you are asked to automate the infrast
 ![4](images/pr01_tf_04.jpg)
 
 
-- ## Create AWS EC2 Instance
+- ## Create a new AWS EC2 Instance
 
 1. Create the working directory.
+
 >```
 > mkdir tf_project
 > cd tf_project
@@ -99,36 +111,91 @@ Considering the Organizational requirement you are asked to automate the infrast
 
 ![5](images/pr01_tf_05.jpg)
 
-2. Create the `awsec.tf` script.
+2. Create the the credentials file: `creds.tf`
+
 >```
-> sudo vi awsec.tf
+> sudo vi creds.tf
 >```
 
-Set up the credentials block.
+> ```
+> # Configure the AWS Provider
+> provider "aws" {
+>   access_key = "ASIA6RJVA5HB4P56P3JD"
+>   secret_key = "Kkocb/aNEROHlbrGrqHwveDr1EZXvDwL8RKnqu8S"
+>   token = "FwoGZXIvYXdzEPz//////////wEaDCeIpOsVk5va3s1yfSK6AYEaBkwUbxlRmrM2gd4Mslhj73Eun9Rykp05J1diPNUw8IskadyLdfuWkQwjFmJhedKm9OyoR1YcN3hfBzamRGdwKIw0QAQ01dRl//ODw53vaUceW51JNs0jWHqsxowppi/1uRmMNkfiuom1oB/5UdjbcSnIrJI7LRvMb1fnDqUij2iQ/ZZzdKg1eSbZJCOnf0BOAsh0fGTwDQn2KBZFBhYZGT04t8yKf8GkM6uosdmP5PSygNQWQmrSTCjHz/CVBjItKB7bl/iAp3kC/qrrBQ2oaaze3ncvJPgu02N0+m5ZhDKD/qcxXaX2M5nh1QHt"
+>   region = "us-east-1"
+> }
+> ```
+_Save and exit `ESC + : + x!`._
 
-```
-provider "aws" {
-access_key = "ASIA6RJVA5HBQFNC2M6P"
-secret_key = "JUIa+KnQKcAW5UtKn7g8zwHN0YHNJqOhz9bF2Ksy"
-token = "FwoGZXIvYXdzEGEaDIV8B4Amjh4GN9x+iSK6AewEQnCUpVzQJIpHaVLj8erKsQJpcXwLnE8c4ySr5ehJAPc1W/3en/JyhSKXaYoD0WLg2KV9x7AuZUGrkBF0yGaSOFy4RS5Ws7xZ1HnhLqVOcg/XTWsb9gR3tA8Sp5VYyF7r8l9FZWxkh4UZOCZ0G3FoWN/vu0IUb5BFb63MIWKXczGiWKiBvsAWeR4rVHSILJoWA2ey9cIqUAoYz5EVHwTs0A9xiLplr0jOXPmge1YLzn7Re/uAt4m49SiP1s6VBjItVGVHyRmpiA8Yg6c5t3TE6VYSj8E3DufOSVDEm0bqZqc4NjQw1fO1OLiVIbE4"
-region = "us-east-1"
-}
-```
+![6](images/pr01_tf_06.png)
 
-Now set up the instance creation block
+3. Create the `main.tf` script.
 
-```
-resource "aws_instance" "terraform_demo" {
-ami = "ami-09e67e426f25ce0d7"
-instance_type = "t2.micro"
-}
-```
+>```
+> sudo vi main.tf
+>```
 
-![6](images/pr01_tf_06.jpg)
+>```
+> # Create a Security Group
+> resource "aws_security_group" "tf_sg" {
+>   name = "tf_sg"
+>   ingress {
+>     from_port   = 22
+>     to_port     = 22
+>     protocol    = "tcp"
+>     cidr_blocks = ["0.0.0.0/0"]
+>   }
+> 
+>   egress {
+>     from_port   = 0
+>     to_port     = 0
+>     protocol    = "-1"
+>     cidr_blocks = ["0.0.0.0/0"]
+>   }
+> }
+> 
+> # Create Key Pair
+> resource "aws_key_pair" "tf_kp" {
+>   key_name   = "tf_kp"
+>   public_key = tls_private_key.rsa.public_key_openssh
+> }
+> 
+> # Choose RSA algorithm for the private key 
+> resource "tls_private_key" "rsa" {
+>   algorithm = "RSA"
+>   rsa_bits = 4096
+> }
+> 
+> # Create private key
+> resource "local_file" "tf_pk_pem" {
+>   content  = tls_private_key.rsa.private_key_pem
+>   filename = "tf_kp.pem"
+> }
+> 
+> provider random {}
+> 
+> resource "random_pet" "name" {}
+> 
+> # Create a new Linux Ubuntu EC2 Instance
+> resource "aws_instance" "ubuntu_00" {
+>   ami = "ami-09e67e426f25ce0d7"
+>   instance_type = "t2.micro"
+>   security_groups = [aws_security_group.tf_sg.name]
+>   key_name = "tf_kp"
+> 
+>   tags = {
+>     Name = random_pet.name.id
+>   }
+> }
+>```
 
-3. Save and exit.
+_Save and exit: `ESC + : + x!`_.
 
-![7](images/pr01_tf_07.jpg)
+![7](images/pr01_tf_07.png)
+
+![7a](images/pr01_tf_07a.png)
+
 
 4. Start Terraform.
 
@@ -136,7 +203,7 @@ instance_type = "t2.micro"
 > sudo terraform init
 >```
 
-![8](images/pr01_tf_08.jpg)
+![8](images/pr01_tf_08.png)
 
 5. Verify the terraform plan.
 
@@ -144,53 +211,99 @@ instance_type = "t2.micro"
 > sudo terraform plan
 >```
 
-![9](images/pr01_tf_09.jpg)
+![9](images/pr01_tf_09.png)
 
 
-![11](images/pr01_tf_11.jpg)
+![10](images/pr01_tf_10.png)
 
 
-6. Execute the terraform plan.
+6. Apply the terraform plan.
 
 >```
 > sudo terraform apply
 >```
 
 
-![12](images/pr01_tf_12.jpg)
+![11](images/pr01_tf_11.png)
 
-![13](images/pr01_tf_13.jpg)
+![12](images/pr01_tf_12.png)
 
 _Notice you have to confirm with **Yes** to apply the plan_
 
 
 7. Verify the EC2 instance has been successfully created.
 
->```
-> sudo terraform apply
->```
+- Log in to the AWS Web Console and go to the Home page.
 
-![14](images/pr01_tf_14.jpg)
+![13](images/pr01_tf_13.png)
 
-![15](images/pr01_tf_15.jpg)
+- Verify the AWS objects were created by the terraform script, such as, the **Key Pair**, the **Security Group** and the **EC2 Instance**.
 
-8. Terminate the AWS EC2 Instance.
+![16](images/pr01_tf_16.png)
+
+
+- View Key Pair object (`tf_kp`) details.
+
+![14](images/pr01_tf_14.png)
+
+- Confirm the Security Group object (`tf_sg`) was created by the terraform main script too.
+
+![15](images/pr01_tf_15.png)
+
+- Verify the EC2 Instance is up and running.
+
+![17](images/pr01_tf_17.png)
+
+- View the EC2 Instance details.
+
+![18](images/pr01_tf_18.png)
+
+
+8. Connect to the EC2 Instance from an SSH terminal.
+
+- From the AWS Console EC2 Instance details, click on the **Connect** button.
+
+- Take the EC2 Instance SSH connection string.
+
+![19](images/pr01_tf_19.png)
+
+- Back in your SSH terminal, check the Key Pair key is installed.
+
+![20](images/pr01_tf_20.png)
+
+- Issue the SSH connection string taken earlier .
+i.e. `ssh -i "tf_kp.pem" ubuntu@ubuntu@ec2-44-203-174-123.compute-1.amazonaws.com`
+
+  _Where the command format is: `ssh -i <ssh key filename> <username>@<full hostname>`_
+
+![21](images/pr01_tf_21.png)
+
+
+9.  Destroy all of the AWS objetcs created earlier by the terraform script.
 
 >```
 > sudo terraform destroy
 >```
 
-![18](images/pr01_tf_18.jpg)
+_Confirm **Yes** when prompted_
 
-![19](images/pr01_tf_19.jpg)
+![22](images/pr01_tf_22.png)
+
+![23](images/pr01_tf_23.png)
+ 
+10. Back to the AWS Console Home, verify the objects where terminated.
+
+![24](images/pr01_tf_24.png)
 
 # Scripts
--  Create AWS EC2 Instance script [awsec.tf](scripts/awsec.tf)
+-  AWS crendentials [creds.tf](scripts/creds.tf)
+-  Create AWS EC2 Instance, whithin a **Key Pair** and **Security Group** [main.tf](scripts/main.tf)
 
 # Logs
 - Setup Terraform [pr01_tf_setup.log](logs/pr01_tf_setup.log)
-- Create AWS EC2 Instance [pr01_tf_awsec.log](logs/pr01_tf_awsec.log)
+- Create AWS EC2 Instance [pr01_tf_instance.log](logs/pr01_tf_instance.log)
 
 # References
 - [Download Terraform](https://www.terraform.io/downloads)
 - [Terrform Tutorial](https://learn.hashicorp.com/terraform?utm_source=terraform_io)
+
